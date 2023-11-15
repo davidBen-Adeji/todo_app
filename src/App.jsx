@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 
 import Home from "./Home.jsx";
 import NewTask from "./NewTask.jsx";
-import CompletedTasks from "./CompletedTasks.jsx";
+import Bin from "./Bin.jsx";
 import { useState } from "react";
 import { INITIAL_TASKS } from "./INITIAL_TASKS.js";
 import ViewedTask from "./ViewedTask.jsx";
@@ -10,7 +10,8 @@ import ViewedTask from "./ViewedTask.jsx";
 function App() {
   const [tasks, setTasks] = useState(INITIAL_TASKS);
   const [index, setIndex] = useState(0);
-
+  const [bin, setBin] = useState([]);
+  
   function addTaskHandler(task) {
     setTasks((prevTasks) => [...prevTasks, task]);
   }
@@ -21,7 +22,22 @@ function App() {
       tasks[index] = { ...updatedTask };
       return tasks;
     });
-    // setIndex(0);
+  }
+
+  function deleteTaskHandler(task) {
+    setBin((prevBin) => [...prevBin, task]);
+    setTasks((prevTasks) =>
+      prevTasks.filter((prevTask) => prevTask.id !== task.id)
+    );
+  }
+
+  function permanentDeleteHandler(task) {
+    setBin((prevBin) => prevBin.filter((binItem) => binItem.id !== task.id));
+  }
+
+  function restoreTaskHandler(task) {
+    setTasks((prevTasks) => [...prevTasks, task]);
+    setBin((prevBin) => prevBin.filter((binItem) => binItem.id !== task.id));
   }
 
   function changeIndexHandler(index) {
@@ -34,19 +50,35 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<Home tasks={tasks} onChangeIndex={changeIndexHandler} />}
+            element={
+              <Home
+                tasks={tasks}
+                onChangeIndex={changeIndexHandler}
+                onDeleteTask={deleteTaskHandler}
+              />
+            }
           />
           <Route
             path="/newTask"
             element={<NewTask onAddTask={addTaskHandler} />}
           />
-          <Route path="/completedTasks" element={<CompletedTasks />} />
           <Route
             path="/task"
             element={
               <ViewedTask
                 task={tasks[index]}
                 onUpdateTask={updateTaskHandler}
+                onDeleteTask={deleteTaskHandler}
+              />
+            }
+          />
+          <Route
+            path="/bin"
+            element={
+              <Bin
+                bin={bin}
+                onDeletePermanently={permanentDeleteHandler}
+                onRestoreTask={restoreTaskHandler}
               />
             }
           />

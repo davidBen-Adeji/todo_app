@@ -14,13 +14,14 @@ import { useMatch, useResolvedPath, Link } from "react-router-dom";
 // - mark task as done
 // view completed tasks (route)
 
-export default function Home({ tasks, onChangeIndex }) {
+export default function Home({ tasks, onChangeIndex, onDeleteTask }) {
   const taskComponent = tasks.map((task, index) => {
     return (
       <Task
         to="/task"
-        key={`${task.taskTitle}_${Math.random()}`}
-        onClick={() => onChangeIndex(index)}
+        key={task.id}
+        onChangeIndex={() => onChangeIndex(index)}
+        onDeleteTask={() => onDeleteTask(task)}
       >
         {task.taskTitle}
       </Task>
@@ -30,19 +31,21 @@ export default function Home({ tasks, onChangeIndex }) {
     <>
       {<ul>{taskComponent}</ul>}
       <Link to="/newTask">New Task</Link>
+    <Link to="/bin">Bin</Link>
     </>
   );
 }
 
-function Task({ to, children, ...props }) {
+function Task({ to, children, onChangeIndex, onDeleteTask}) {
   const resolvedPath = useResolvedPath(to);
   const isActive = useMatch({ path: resolvedPath.pathname, end: true });
 
   return (
     <li className={isActive ? "active" : ""}>
-      <Link to={to} {...props}>
+      <Link to={to} onClick={onChangeIndex}>
         {children}
       </Link>
+      <button onClick={onDeleteTask} type="submit">delete</button>
     </li>
   );
 }

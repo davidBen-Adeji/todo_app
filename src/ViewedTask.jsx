@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function ViewedTask({ task, onUpdateTask }) {
+export default function ViewedTask({ task, onUpdateTask, onDeleteTask }) {
   const [taskTitle, setTaskTitle] = useState(task.taskTitle);
   const [taskItem, setTaskItem] = useState("");
   const [taskItems, setTaskItems] = useState(task.taskItems);
-  const updatedTask = { taskTitle, taskItems };
+  const updatedTask = { taskTitle, taskItems, id: task.id };
 
   function inputChangeHandler(inputName, value) {
     if (inputName === "taskTitle") {
@@ -53,8 +53,13 @@ export default function ViewedTask({ task, onUpdateTask }) {
           <button type="submit">Add</button>
         </form>
       </div>
+      <Link to="/" onClick={() => onDeleteTask(updatedTask)}>
+        delete
+      </Link>
       <Link to="/">Home</Link>
-      <Link to="/" onClick={() => onUpdateTask(updatedTask)} >Done</Link>
+      <Link to="/" onClick={() => onUpdateTask(updatedTask)}>
+        Done
+      </Link>
     </>
   );
 }
