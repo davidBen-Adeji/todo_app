@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function NewTask({ onAddTask }) {
-  const [taskTitle, setTaskTitle] = useState("");
+export default function ViewedTask({ task, onUpdateTask }) {
+  const [taskTitle, setTaskTitle] = useState(task.taskTitle);
   const [taskItem, setTaskItem] = useState("");
-  const [taskItems, setTaskItems] = useState([]);
-  const task = { taskTitle, taskItems };
+  const [taskItems, setTaskItems] = useState(task.taskItems);
+  const updatedTask = { taskTitle, taskItems };
 
   function inputChangeHandler(inputName, value) {
     if (inputName === "taskTitle") {
@@ -25,7 +25,6 @@ export default function NewTask({ onAddTask }) {
 
   return (
     <>
-      <h1>New task</h1>
       <div>
         <input
           type="text"
@@ -36,13 +35,11 @@ export default function NewTask({ onAddTask }) {
           }
         />
       </div>
-
       <ul>
-        {task.taskItems.map((item) => (
-          <li key={`${item}_${Math.random()}`}>{item}</li>
-        ))}
+        {taskItems.map((taskItem) => {
+          return <li key={`${taskItem}_${Math.random()}`}>{taskItem}</li>;
+        })}
       </ul>
-
       <div>
         <form action="" onSubmit={(event) => taskItemsHandler(event, taskItem)}>
           <input
@@ -57,7 +54,7 @@ export default function NewTask({ onAddTask }) {
         </form>
       </div>
       <Link to="/">Home</Link>
-          <Link to="/" onClick={() => onAddTask(task)}>Done</Link>
+      <Link to="/" onClick={() => onUpdateTask(updatedTask)} >Done</Link>
     </>
   );
 }

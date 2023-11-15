@@ -1,10 +1,4 @@
-import {
-  useMatch,
-  useResolvedPath,
-  Link,
-} from "react-router-dom";
-
-import { INITIAL_TASKS } from "./INITIAL_TASKS.js";
+import { useMatch, useResolvedPath, Link } from "react-router-dom";
 
 // // # functionalities
 // // - create task (route)
@@ -20,22 +14,27 @@ import { INITIAL_TASKS } from "./INITIAL_TASKS.js";
 // - mark task as done
 // view completed tasks (route)
 
-export default function Home({ onChangeIndex }) {
-  const taskComponent = INITIAL_TASKS.map((task, index) => {
+export default function Home({ tasks, onChangeIndex }) {
+  const taskComponent = tasks.map((task, index) => {
     return (
-      <CustomLink
+      <Task
         to="/task"
-        key={`${task.taskName}_${Math.random()}`}
+        key={`${task.taskTitle}_${Math.random()}`}
         onClick={() => onChangeIndex(index)}
       >
-        {task.taskName}
-      </CustomLink>
+        {task.taskTitle}
+      </Task>
     );
   });
-  return <>{<ul>{taskComponent}</ul>}</>;
+  return (
+    <>
+      {<ul>{taskComponent}</ul>}
+      <Link to="/newTask">New Task</Link>
+    </>
+  );
 }
 
-function CustomLink({ to, children, ...props }) {
+function Task({ to, children, ...props }) {
   const resolvedPath = useResolvedPath(to);
   const isActive = useMatch({ path: resolvedPath.pathname, end: true });
 
