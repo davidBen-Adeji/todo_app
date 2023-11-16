@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { INITIAL_TASKS } from "./INITIAL_TASKS.js";
-import RoutesComponent from './RoutesComponent.jsx'
+import RoutesComponent from './Components/RoutesComponent.jsx'
+import Aside from "./Components/Aside.jsx";
 
 function App() {
   const [tasks, setTasks] = useState(
@@ -71,6 +72,7 @@ function App() {
 
   return (
     <>
+    <Aside />
     <RoutesComponent
       task={tasks[index]}
       tasks={tasks}

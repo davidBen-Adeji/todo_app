@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import Tasks from "./Components/Tasks/Tasks.jsx";
-import NewTask from "./Components/NewTask/NewTask.jsx";
-import Bin from "./Components/Bin/Bin.jsx";
-import ViewedTask from "./Components/ViewedTask/ViewedTask.jsx";
+import Tasks from "./Tasks/Tasks.jsx";
+import NewTask from "./NewTask/NewTask.jsx";
+import Bin from "./Bin/Bin.jsx";
+import ViewedTask from "./ViewedTask/ViewedTask.jsx";
 
 export default function RoutesComponent({
   task,
