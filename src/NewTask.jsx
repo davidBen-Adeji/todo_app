@@ -5,7 +5,14 @@ export default function NewTask({ onAddTask }) {
   const [taskTitle, setTaskTitle] = useState("");
   const [taskItem, setTaskItem] = useState("");
   const [taskItems, setTaskItems] = useState([]);
-  const task = { taskTitle, taskItems, isChecked: false, id: `${taskTitle}_${Math.random()}`};
+  const [checkedState, setCheckedState] = useState(
+    new Array(taskItems.length).fill(false)
+  );
+  const task = {
+    taskTitle,
+    taskItems,
+    id: `${taskTitle}_${Math.random()}`,
+  };
 
   function inputChangeHandler(inputName, value) {
     if (inputName === "taskTitle") {
@@ -15,12 +22,28 @@ export default function NewTask({ onAddTask }) {
     }
   }
 
+  function toggleCheckedHandler(index) {
+    setCheckedState((prevState) => {
+      const state = [...prevState];
+      state[index] = !state[index];
+      return state;
+    });
+  }
+
   function taskItemsHandler(event, taskItem) {
     event.preventDefault();
     if (taskItem) {
       setTaskItems((prevItems) => [...prevItems, taskItem]);
       setTaskItem("");
     }
+  }
+
+  function deleteItemHandler(index) {
+    setTaskItems((prevItems) => {
+      const updatedTaskItems = [...prevItems];
+      updatedTaskItems.splice(index, 1);
+      return updatedTaskItems;
+    });
   }
 
   return (
@@ -38,8 +61,19 @@ export default function NewTask({ onAddTask }) {
       </div>
 
       <ul>
-        {task.taskItems.map((item) => (
-          <li key={`${item}_${Math.random()}`}>{item}</li>
+        {task.taskItems.map((item, index) => (
+          <li key={`${item}_${Math.random()}`}>
+            
+              <input
+                type="checkbox"
+                checked={checkedState[index]}
+                onChange={() => toggleCheckedHandler(index)}
+              />{" "}
+            {item}
+              <button type="button" onClick={() => deleteItemHandler(index)}>
+                delete
+              </button>
+            </li>
         ))}
       </ul>
 
@@ -57,7 +91,9 @@ export default function NewTask({ onAddTask }) {
         </form>
       </div>
       <Link to="/">Home</Link>
-          <Link to="/" onClick={() => onAddTask(task)}>Done</Link>
+      <Link to="/" onClick={() => onAddTask(task)}>
+        Done
+      </Link>
     </>
   );
 }

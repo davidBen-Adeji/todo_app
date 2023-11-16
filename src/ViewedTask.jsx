@@ -3,9 +3,13 @@ import { Link } from "react-router-dom";
 
 export default function ViewedTask({ task, onUpdateTask, onDeleteTask }) {
   const [taskTitle, setTaskTitle] = useState(task.taskTitle);
-  const [taskItem, setTaskItem] = useState("");
   const [taskItems, setTaskItems] = useState(task.taskItems);
-  const updatedTask = { taskTitle, taskItems, isChecked: false, id: task.id };
+  const [taskItem, setTaskItem] = useState("");
+  const [checkedState, setCheckedState] = useState(
+    new Array(taskItems.length).fill(false)
+  );
+
+  const updatedTask = { taskTitle, taskItems, id: task.id };
 
   function inputChangeHandler(inputName, value) {
     if (inputName === "taskTitle") {
@@ -15,12 +19,28 @@ export default function ViewedTask({ task, onUpdateTask, onDeleteTask }) {
     }
   }
 
-  function taskItemsHandler(event, taskItem) {
+  function toggleCheckedHandler(index) {
+    setCheckedState((prevState) => {
+      const state = [...prevState];
+      state[index] = !state[index];
+      return state;
+    });
+  }
+
+  function addTaskItemsHandler(event, taskItem) {
     event.preventDefault();
     if (taskItem) {
       setTaskItems((prevItems) => [...prevItems, taskItem]);
       setTaskItem("");
     }
+  }
+
+  function deleteItemHandler(index) {
+    setTaskItems((prevItems) => {
+      const updatedTaskItems = [...prevItems];
+      updatedTaskItems.splice(index, 1);
+      return updatedTaskItems;
+    });
   }
 
   return (
@@ -36,12 +56,27 @@ export default function ViewedTask({ task, onUpdateTask, onDeleteTask }) {
         />
       </div>
       <ul>
-        {taskItems.map((taskItem) => {
-          return <li key={`${taskItem}_${Math.random()}`}>{taskItem}</li>;
+        {taskItems.map((taskItem, index) => {
+          return (
+            <li key={`${taskItem}_${Math.random()}`}>
+              <input
+                type="checkbox"
+                checked={checkedState[index]}
+                onChange={() => toggleCheckedHandler(index)}
+              />{" "}
+              {taskItem}
+              <button type="button" onClick={() => deleteItemHandler(index)}>
+                delete
+              </button>
+            </li>
+          );
         })}
       </ul>
       <div>
-        <form action="" onSubmit={(event) => taskItemsHandler(event, taskItem)}>
+        <form
+          action=""
+          onSubmit={(event) => addTaskItemsHandler(event, taskItem)}
+        >
           <input
             type="text"
             value={taskItem}

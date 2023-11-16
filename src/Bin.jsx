@@ -1,4 +1,12 @@
+import { Link } from "react-router-dom";
+
 export default function Bin({ bin, onDeletePermanently, onRestoreTask }) {
+  function onDeleteAll() {
+    for (const b of bin) {
+      onDeletePermanently(b);
+    }
+  }
+
   return (
     <>
       <h1>hi</h1>
@@ -19,6 +27,11 @@ export default function Bin({ bin, onDeletePermanently, onRestoreTask }) {
             </li>
           ))}
       </ul>
+      <button type="button" onClick={onDeleteAll}>
+        Empty bin
+      </button>
+
+      <Link to="/">Home</Link>
     </>
   );
 }

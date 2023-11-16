@@ -8,48 +8,69 @@ import { INITIAL_TASKS } from "./INITIAL_TASKS.js";
 import ViewedTask from "./ViewedTask.jsx";
 
 function App() {
-  const [tasks, setTasks] = useState(INITIAL_TASKS);
-  const [index, setIndex] = useState(0);
-  const [bin, setBin] = useState([]);
-
-  function toggleCheckHandler(index) {
-    setTasks((prevTasks) => {
-      const tasks = [...prevTasks];
-      tasks[index].isChecked = !tasks[index].isChecked;
-      console.log(tasks[index].isChecked)
-      return tasks;
-    });
-  }
+  const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem("tasks")) || INITIAL_TASKS
+  );
+  const [index, setIndex] = useState(
+    JSON.parse(localStorage.getItem("index")) || 0
+  );
+  const [bin, setBin] = useState(JSON.parse(localStorage.getItem("bin")) || []);
 
   function addTaskHandler(task) {
-    setTasks((prevTasks) => [...prevTasks, task]);
+    setTasks((prevTasks) => {
+      localStorage.setItem("tasks", JSON.stringify([...prevTasks, task]));
+      return [...prevTasks, task];
+    });
   }
 
   function updateTaskHandler(updatedTask) {
     setTasks((prevTasks) => {
       const tasks = [...prevTasks];
       tasks[index] = { ...updatedTask };
+      localStorage.setItem("tasks", JSON.stringify(tasks));
       return tasks;
     });
   }
 
   function deleteTaskHandler(task) {
-    setBin((prevBin) => [...prevBin, task]);
-    setTasks((prevTasks) =>
-      prevTasks.filter((prevTask) => prevTask.id !== task.id)
-    );
+    setBin((prevBin) => {
+      localStorage.setItem("bin", JSON.stringify([...prevBin, task]));
+      return [...prevBin, task];
+    });
+
+    setTasks((prevTasks) => {
+      const updatedTasks = prevTasks.filter(
+        (prevTask) => prevTask.id !== task.id
+      );
+      console.log(updatedTasks);
+      localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+      return updatedTasks;
+    });
   }
 
   function permanentDeleteHandler(task) {
-    setBin((prevBin) => prevBin.filter((binItem) => binItem.id !== task.id));
+    setBin((prevBin) => {
+      const updatedBin = prevBin.filter((binItem) => binItem.id !== task.id);
+      localStorage.setItem("bin", JSON.stringify(updatedBin));
+      return updatedBin;
+    });
   }
 
   function restoreTaskHandler(task) {
-    setTasks((prevTasks) => [...prevTasks, task]);
-    setBin((prevBin) => prevBin.filter((binItem) => binItem.id !== task.id));
+    setTasks((prevTasks) => {
+      localStorage.setItem("bin", JSON.stringify([...prevTasks, task]));
+      return [...prevTasks, task];
+    });
+
+    setBin((prevBin) => {
+      const updatedBin = prevBin.filter((binItem) => binItem.id !== task.id);
+      localStorage.setItem("bin", JSON.stringify(updatedBin));
+      return updatedBin;
+    });
   }
 
   function changeIndexHandler(index) {
+    localStorage.setItem("item", JSON.stringify(index));
     setIndex(index);
   }
 
@@ -62,7 +83,6 @@ function App() {
             element={
               <Home
                 tasks={tasks}
-                onToggleCheck={toggleCheckHandler}
                 onChangeIndex={changeIndexHandler}
                 onDeleteTask={deleteTaskHandler}
               />
