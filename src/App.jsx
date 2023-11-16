@@ -1,11 +1,6 @@
-import { Route, Routes } from "react-router-dom";
-
-import Home from "./Home.jsx";
-import NewTask from "./NewTask.jsx";
-import Bin from "./Bin.jsx";
 import { useState } from "react";
 import { INITIAL_TASKS } from "./INITIAL_TASKS.js";
-import ViewedTask from "./ViewedTask.jsx";
+import RoutesComponent from './RoutesComponent.jsx'
 
 function App() {
   const [tasks, setTasks] = useState(
@@ -70,50 +65,23 @@ function App() {
   }
 
   function changeIndexHandler(index) {
-    localStorage.setItem("item", JSON.stringify(index));
+    localStorage.setItem("index", JSON.stringify(index));
     setIndex(index);
   }
 
   return (
     <>
-      <div>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Home
-                tasks={tasks}
-                onChangeIndex={changeIndexHandler}
-                onDeleteTask={deleteTaskHandler}
-              />
-            }
-          />
-          <Route
-            path="/newTask"
-            element={<NewTask onAddTask={addTaskHandler} />}
-          />
-          <Route
-            path="/task"
-            element={
-              <ViewedTask
-                task={tasks[index]}
-                onUpdateTask={updateTaskHandler}
-                onDeleteTask={deleteTaskHandler}
-              />
-            }
-          />
-          <Route
-            path="/bin"
-            element={
-              <Bin
-                bin={bin}
-                onDeletePermanently={permanentDeleteHandler}
-                onRestoreTask={restoreTaskHandler}
-              />
-            }
-          />
-        </Routes>
-      </div>
+    <RoutesComponent
+      task={tasks[index]}
+      tasks={tasks}
+      bin={bin}
+      onChangeIndex={changeIndexHandler}
+      onAddTask={addTaskHandler}
+      onDeleteTask={deleteTaskHandler}
+      onUpdateTask={updateTaskHandler}
+      onRestoreTask={restoreTaskHandler}
+      onDeletePermanently={permanentDeleteHandler}
+    />
     </>
   );
 }
