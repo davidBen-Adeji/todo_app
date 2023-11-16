@@ -5,7 +5,7 @@ export default function ViewedTask({ task, onUpdateTask, onDeleteTask }) {
   const [taskTitle, setTaskTitle] = useState(task.taskTitle);
   const [taskItem, setTaskItem] = useState("");
   const [taskItems, setTaskItems] = useState(task.taskItems);
-  const updatedTask = { taskTitle, taskItems, id: task.id };
+  const updatedTask = { taskTitle, taskItems, isChecked: false, id: task.id };
 
   function inputChangeHandler(inputName, value) {
     if (inputName === "taskTitle") {

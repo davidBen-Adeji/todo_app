@@ -5,7 +5,7 @@ export default function NewTask({ onAddTask }) {
   const [taskTitle, setTaskTitle] = useState("");
   const [taskItem, setTaskItem] = useState("");
   const [taskItems, setTaskItems] = useState([]);
-  const task = { taskTitle, taskItems, id: `${taskTitle}_${Math.random()}`};
+  const task = { taskTitle, taskItems, isChecked: false, id: `${taskTitle}_${Math.random()}`};
 
   function inputChangeHandler(inputName, value) {
     if (inputName === "taskTitle") {

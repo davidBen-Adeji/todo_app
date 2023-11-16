@@ -7,10 +7,7 @@ export default function Bin({ bin, onDeletePermanently, onRestoreTask }) {
           bin.map((binItem) => (
             <li key={binItem.id}>
               {binItem.taskTitle}{" "}
-              <button 
-                type="button" 
-                onClick={() => onRestoreTask(binItem)}
-               >
+              <button type="button" onClick={() => onRestoreTask(binItem)}>
                 Restore
               </button>
               <button

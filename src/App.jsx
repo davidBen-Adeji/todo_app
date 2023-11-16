@@ -11,7 +11,16 @@ function App() {
   const [tasks, setTasks] = useState(INITIAL_TASKS);
   const [index, setIndex] = useState(0);
   const [bin, setBin] = useState([]);
-  
+
+  function toggleCheckHandler(index) {
+    setTasks((prevTasks) => {
+      const tasks = [...prevTasks];
+      tasks[index].isChecked = !tasks[index].isChecked;
+      console.log(tasks[index].isChecked)
+      return tasks;
+    });
+  }
+
   function addTaskHandler(task) {
     setTasks((prevTasks) => [...prevTasks, task]);
   }
@@ -53,6 +62,7 @@ function App() {
             element={
               <Home
                 tasks={tasks}
+                onToggleCheck={toggleCheckHandler}
                 onChangeIndex={changeIndexHandler}
                 onDeleteTask={deleteTaskHandler}
               />
