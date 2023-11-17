@@ -30,12 +30,7 @@ export default function RoutesComponent({
       <Route path="/newTask" element={<NewTask onAddTask={onAddTask} />} />
       <Route
         path="/task"
-        element={
-          <ViewedTask
-            task={task}
-            onUpdateTask={onUpdateTask}
-          />
-        }
+        element={<ViewedTask task={task} onUpdateTask={onUpdateTask} />}
       />
       <Route
         path="/bin"
