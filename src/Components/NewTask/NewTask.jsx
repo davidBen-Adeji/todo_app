@@ -118,7 +118,9 @@ export default function NewTask({ onAddTask }) {
       {/* <Link to="/">Home</Link> */}
       <Link
         className="absolute right-7 bottom-6 flex justify-center items-center bg-[#d9d9d9] w-14 h-14 rounded-full text-5xl"
-       to="/" onClick={() => onAddTask(task)}>
+        to="/"
+        onClick={() => onAddTask(task)}
+      >
         <img className="w-9 h-9" src={DoneImg} alt="done" />
       </Link>
     </>

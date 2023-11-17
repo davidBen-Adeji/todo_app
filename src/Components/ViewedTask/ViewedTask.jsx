@@ -11,7 +11,11 @@ export default function ViewedTask({ task, onUpdateTask }) {
     new Array(taskItems.length).fill(false)
   );
 
-  const updatedTask = { taskTitle, taskItems, id: task.id };
+  const updatedTask = {
+    taskTitle: taskTitle || "unnamed task",
+    taskItems,
+    id: task.id,
+  };
 
   function inputChangeHandler(inputName, value) {
     if (inputName === "taskTitle") {
@@ -61,11 +65,12 @@ export default function ViewedTask({ task, onUpdateTask }) {
       <ul>
         {taskItems.map((taskItem, index) => {
           const inputId = `checkbox_${Math.random()}`;
-          let linkClass = "capitalize"
-          let spanClass = ""
-          if(checkedState[index]) {
+          let linkClass = "capitalize";
+          let spanClass = "";
+          if (checkedState[index]) {
             linkClass += " opacity-50";
-            spanClass = "block w-[70%] h-[70%] bg-black rounded-full cursor-pointer"
+            spanClass =
+              "block w-[70%] h-[70%] bg-black rounded-full cursor-pointer";
           }
           return (
             <li
@@ -90,7 +95,11 @@ export default function ViewedTask({ task, onUpdateTask }) {
                   {taskItem}
                 </Link>
               </div>
-              <button className="hover:opacity-80" type="button" onClick={() => deleteItemHandler(index)}>
+              <button
+                className="hover:opacity-80"
+                type="button"
+                onClick={() => deleteItemHandler(index)}
+              >
                 <img className="w-6 h-6" src={BinImg} alt="bin" />
               </button>
             </li>
