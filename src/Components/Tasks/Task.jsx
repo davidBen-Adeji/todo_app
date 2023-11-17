@@ -21,7 +21,7 @@ export default function Task({
   return (
     <li className="relative bg-[#D9D9D9] mt-6 flex justify-between items-center gap-2 p-3 rounded-full">
       <input
-        className="absolute opacity-0"
+        className="absolute opacity-0 top-12"
         type="checkbox"
         id={inputId}
         checked={isChecked}
