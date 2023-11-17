@@ -20,10 +20,11 @@ return (
 function CustomLink({to, children}) {
   const resolvedPath = useResolvedPath(to);
   const isActive = useMatch({ path: resolvedPath.pathname, end: true });
-    let linkClass = "relative flex gap-1 items-end opacity-70 hover:opacity-100 focus:opacity-100"
-
+    let linkClass = "relative flex gap-1 items-end hover:opacity-100 focus:opacity-100";
     if (isActive) {
         linkClass += " opacity-100"
+    } else {
+        linkClass += " opacity-70"
     }
 
     return (

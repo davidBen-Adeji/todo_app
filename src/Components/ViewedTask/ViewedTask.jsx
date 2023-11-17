@@ -82,7 +82,7 @@ export default function ViewedTask({ task, onUpdateTask }) {
               <div className="flex items-center gap-5">
                 <label
                   htmlFor={inputId}
-                  className="flex justify-center items-center w-5 h-5 border-black border rounded-full cursor-pointer"
+                  className="flex justify-center items-center w-5 h-5 border-black border rounded-full cursor-pointer hover:opacity-80"
                 >
                   <span className={spanClass}></span>
                 </label>
@@ -90,7 +90,7 @@ export default function ViewedTask({ task, onUpdateTask }) {
                   {taskItem}
                 </Link>
               </div>
-              <button type="button" onClick={() => deleteItemHandler(index)}>
+              <button className="hover:opacity-80" type="button" onClick={() => deleteItemHandler(index)}>
                 <img className="w-6 h-6" src={BinImg} alt="bin" />
               </button>
             </li>
@@ -112,7 +112,7 @@ export default function ViewedTask({ task, onUpdateTask }) {
                 inputChangeHandler("taskItem", event.target.value)
               }
             />
-            <button className=" text-2xl" type="submit">
+            <button className=" text-2xl hover:opacity-80" type="submit">
               +
             </button>
           </div>
@@ -123,7 +123,7 @@ export default function ViewedTask({ task, onUpdateTask }) {
       </Link> */}
       {/* <Link to="/">Home</Link> */}
       <Link
-        className="absolute right-7 bottom-6 flex justify-center items-center bg-[#d9d9d9] w-14 h-14 rounded-full text-5xl"
+        className="absolute right-7 bottom-6 flex justify-center items-center bg-[#d9d9d9] w-14 h-14 rounded-full text-5xl hover:opacity-80"
         to="/"
         onClick={() => onUpdateTask(updatedTask)}
       >
