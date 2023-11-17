@@ -11,7 +11,7 @@ export default function ViewedTask({ task, onUpdateTask }) {
     new Array(taskItems.length).fill(false)
   );
 
-  const updatedTask = { taskTitle, taskItems, id: task.id };
+  const updatedTask = { taskTitle: taskTitle || "unnamed task", taskItems, id: task.id };
 
   function inputChangeHandler(inputName, value) {
     if (inputName === "taskTitle") {
