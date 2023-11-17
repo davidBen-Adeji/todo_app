@@ -3,7 +3,7 @@ import BinImg from "../assets/svg/bin.svg";
 import {useResolvedPath, useMatch, Link } from "react-router-dom";
 
 export default function Header() {
-
+    // const spanClass
 return (
     <header className="bg-[#D9D9D9] px-5 py-4 flex gap-8 lappy:flex-col lappy:pt-24 lappy:gap-10">
         <CustomLink to="/">
@@ -18,10 +18,15 @@ return (
 ) }
 
 function CustomLink({to, children}) {
-//   const resolvedPath = useResolvedPath(to);
-//   const isActive = useMatch({ path: resolvedPath.pathname, end: true });
+  const resolvedPath = useResolvedPath(to);
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
+    let linkClass = "relative flex gap-1 items-end opacity-70 hover:opacity-100 focus:opacity-100"
+
+    if (isActive) {
+        linkClass += " opacity-100"
+    }
 
     return (
-        <Link className="flex gap-1 items-end" to={to}>{children}</Link>
+        <Link className={linkClass} to={to}>{children}</Link>
     )
 }

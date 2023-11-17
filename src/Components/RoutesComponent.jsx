@@ -34,7 +34,6 @@ export default function RoutesComponent({
           <ViewedTask
             task={task}
             onUpdateTask={onUpdateTask}
-            onDeleteTask={onDeleteTask}
           />
         }
       />

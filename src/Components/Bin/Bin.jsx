@@ -22,7 +22,7 @@ export default function Bin({ bin, onDeletePermanently, onRestoreTask }) {
               className="relative bg-[#D9D9D9] mt-6 flex justify-between items-center gap-2 p-3 rounded-full"
               key={binItem.id}
             >
-              <Link to="" className="capitalize opacity-50">{binItem.taskTitle}</Link>{" "}
+              <Link to="" className="capitalize opacity-50 cursor-not-allowed">{binItem.taskTitle}</Link>{" "}
               <div className="flex items-center gap-2">
                 <button type="button" onClick={() => onRestoreTask(binItem)}>
                   <img className="w-6 h-6" src={RestoreImg} alt="restore" />

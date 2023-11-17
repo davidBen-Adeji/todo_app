@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import BinImg from "../../assets/svg/bin.svg";
 import DoneImg from "../../assets/svg/done.svg";
 
-export default function ViewedTask({ task, onUpdateTask, onDeleteTask }) {
+export default function ViewedTask({ task, onUpdateTask }) {
   const [taskTitle, setTaskTitle] = useState(task.taskTitle);
   const [taskItems, setTaskItems] = useState(task.taskItems);
   const [taskItem, setTaskItem] = useState("");
@@ -61,6 +61,12 @@ export default function ViewedTask({ task, onUpdateTask, onDeleteTask }) {
       <ul>
         {taskItems.map((taskItem, index) => {
           const inputId = `checkbox_${Math.random()}`;
+          let linkClass = "capitalize"
+          let spanClass = ""
+          if(checkedState[index]) {
+            linkClass += " opacity-50";
+            spanClass = "block w-[70%] h-[70%] bg-black rounded-full cursor-pointer"
+          }
           return (
             <li
               className="relative bg-[#D9D9D9] mt-6 flex justify-between items-center gap-2 p-3 rounded-full"
@@ -78,9 +84,9 @@ export default function ViewedTask({ task, onUpdateTask, onDeleteTask }) {
                   htmlFor={inputId}
                   className="flex justify-center items-center w-5 h-5 border-black border rounded-full cursor-pointer"
                 >
-                  <span className="block w-[70%] h-[70%] bg-black rounded-full cursor-pointer"></span>
+                  <span className={spanClass}></span>
                 </label>
-                <Link to="" className=" capitalize">
+                <Link to="" className={linkClass}>
                   {taskItem}
                 </Link>
               </div>
