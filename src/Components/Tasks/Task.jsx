@@ -28,12 +28,12 @@ export default function Task({
         onChange={onToggleCheck}
       />
       <div className="flex items-center gap-5">
-        <label
-          htmlFor={inputId}
-          className="flex justify-center items-center w-5 h-5 border-black border rounded-full cursor-pointer"
-        >
-          <span className={spanClass}></span>
-        </label>
+          <label
+            htmlFor={inputId}
+            className="flex justify-center items-center w-5 h-5 border-black border rounded-full cursor-pointer"
+          >
+            <span className={spanClass}></span>
+          </label>
         <Link to={path} onClick={onChangeIndex} className={linkClass}>
           {children}
         </Link>
