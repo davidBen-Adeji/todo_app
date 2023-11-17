@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { INITIAL_TASKS } from "./INITIAL_TASKS.js";
-import RoutesComponent from './Components/RoutesComponent.jsx'
-import Aside from "./Components/Aside.jsx";
+import RoutesComponent from "./Components/RoutesComponent.jsx";
+import Header from "./Components/Header.jsx";
+import Main from "./Components/Main.jsx";
 
 function App() {
   const [tasks, setTasks] = useState(
@@ -38,7 +39,6 @@ function App() {
       const updatedTasks = prevTasks.filter(
         (prevTask) => prevTask.id !== task.id
       );
-      console.log(updatedTasks);
       localStorage.setItem("tasks", JSON.stringify(updatedTasks));
       return updatedTasks;
     });
@@ -72,18 +72,20 @@ function App() {
 
   return (
     <>
-    <Aside />
-    <RoutesComponent
-      task={tasks[index]}
-      tasks={tasks}
-      bin={bin}
-      onChangeIndex={changeIndexHandler}
-      onAddTask={addTaskHandler}
-      onDeleteTask={deleteTaskHandler}
-      onUpdateTask={updateTaskHandler}
-      onRestoreTask={restoreTaskHandler}
-      onDeletePermanently={permanentDeleteHandler}
-    />
+      <Header />
+      <Main>
+        <RoutesComponent
+          task={tasks[index]}
+          tasks={tasks}
+          bin={bin}
+          onChangeIndex={changeIndexHandler}
+          onAddTask={addTaskHandler}
+          onDeleteTask={deleteTaskHandler}
+          onUpdateTask={updateTaskHandler}
+          onRestoreTask={restoreTaskHandler}
+          onDeletePermanently={permanentDeleteHandler}
+        />
+      </Main>
     </>
   );
 }
