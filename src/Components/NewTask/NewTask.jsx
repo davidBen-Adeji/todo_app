@@ -65,6 +65,15 @@ export default function NewTask({ onAddTask }) {
 
       <ul>
         {task.taskItems.map((item, index) => {
+          let linkClass = "capitalize";
+          let spanClass = "";
+
+          if (checkedState[index]) {
+            linkClass += " opacity-50";
+            spanClass =
+              "block w-[70%] h-[70%] bg-black rounded-full cursor-pointer";
+          }
+
           const inputId = `checkbox_${Math.random()}`;
           return (
             <li
@@ -83,9 +92,9 @@ export default function NewTask({ onAddTask }) {
                   htmlFor={inputId}
                   className="flex justify-center items-center w-5 h-5 border-black border rounded-full cursor-pointer"
                 >
-                  <span className="block w-[70%] h-[70%] bg-black rounded-full cursor-pointer"></span>
+                  <span className={spanClass}></span>
                 </label>
-                <Link to="" className="capitalize">
+                <Link to="" className={linkClass}>
                   {item}
                 </Link>
               </div>
@@ -118,7 +127,9 @@ export default function NewTask({ onAddTask }) {
       {/* <Link to="/">Home</Link> */}
       <Link
         className="absolute right-7 bottom-6 flex justify-center items-center bg-[#d9d9d9] w-14 h-14 rounded-full text-5xl"
-       to="/" onClick={() => onAddTask(task)}>
+        to="/"
+        onClick={() => onAddTask(task)}
+      >
         <img className="w-9 h-9" src={DoneImg} alt="done" />
       </Link>
     </>

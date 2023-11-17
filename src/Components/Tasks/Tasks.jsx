@@ -31,7 +31,7 @@ export default function Tasks({ tasks, onChangeIndex, onDeleteTask }) {
     );
   });
   return (
-    <div>
+    <>
       <div className="flex items-center mt-5 mb-8 gap-2">
         <img className="w-18 h-18" src={TaskImg} alt="task" />
         <h1 className="text-3xl">Tasks</h1>
@@ -43,6 +43,6 @@ export default function Tasks({ tasks, onChangeIndex, onDeleteTask }) {
       >
         <span>+</span>
       </Link>
-    </div>
+    </>
   );
 }
