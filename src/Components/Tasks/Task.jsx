@@ -1,5 +1,5 @@
-import CheckBox from "../Global/CheckBox";
-import DeleteButton from "./DeleteButton";
+import CheckBox from "./CheckBox.jsx";
+import DeleteTaskButton from "./DeleteTaskButton.jsx";
 import TaskTitle from "./TaskTitle";
 
 export default function Task({
@@ -28,7 +28,7 @@ export default function Task({
       >
         {children}
       </TaskTitle>
-      <DeleteButton onDeleteTask={onDeleteTask} />
+      <DeleteTaskButton onDeleteTask={onDeleteTask} />
     </li>
   );
 }
