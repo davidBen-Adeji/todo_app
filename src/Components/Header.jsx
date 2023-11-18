@@ -3,7 +3,6 @@ import BinImg from "../assets/svg/bin.svg";
 import { useResolvedPath, useMatch, Link } from "react-router-dom";
 
 export default function Header() {
-  // const spanClass
   return (
     <header className="bg-[#D9D9D9] px-5 py-4 flex gap-8 lappy:flex-col lappy:pt-24 lappy:gap-10">
       <CustomLink to="/">
@@ -30,7 +29,7 @@ function CustomLink({ to, children }) {
   }
 
   return (
-    <Link className={linkClass} to={to}>
+    <Link className={linkClass} to={to} onClick={() => localStorage.removeItem("newId")}>
       {children}
     </Link>
   );

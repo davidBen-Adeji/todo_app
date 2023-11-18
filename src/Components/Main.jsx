@@ -27,7 +27,7 @@ export default function Main() {
     });
   }
 
-  function deleteTaskHandler(task) {
+  function deleteTaskHandler(task, index, setCheckedState) {
     setBin((prevBin) => {
       localStorage.setItem("bin", JSON.stringify([...prevBin, task]));
       return [...prevBin, task];
@@ -40,9 +40,17 @@ export default function Main() {
       localStorage.setItem("tasks", JSON.stringify(updatedTasks));
       return updatedTasks;
     });
+
+    setCheckedState((prevState) => {
+      const newState = [...prevState];
+      newState.splice(index, 1);
+      return newState;
+    });
   }
 
   function permanentDeleteHandler(task) {
+    localStorage.removeItem(`${task.id}_items`);
+    localStorage.removeItem(`${task.id}_checkedState`)
     setBin((prevBin) => {
       const updatedBin = prevBin.filter((binItem) => binItem.id !== task.id);
       localStorage.setItem("bin", JSON.stringify(updatedBin));

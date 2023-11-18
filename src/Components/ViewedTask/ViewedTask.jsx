@@ -5,10 +5,13 @@ import DoneImg from "../../assets/svg/done.svg";
 
 export default function ViewedTask({ task, onUpdateTask }) {
   const [taskTitle, setTaskTitle] = useState(task.taskTitle);
-  const [taskItems, setTaskItems] = useState(task.taskItems);
+  const [taskItems, setTaskItems] = useState(
+    JSON.parse(localStorage.getItem(`${task.id}_items`)) || task.taskItems
+  );
   const [taskItem, setTaskItem] = useState("");
   const [checkedState, setCheckedState] = useState(
-    new Array(taskItems.length).fill(false)
+    JSON.parse(localStorage.getItem(`${task.id}_checkedState`)) ||
+      new Array(taskItems.length).fill(false)
   );
 
   const updatedTask = {
@@ -29,6 +32,7 @@ export default function ViewedTask({ task, onUpdateTask }) {
     setCheckedState((prevState) => {
       const state = [...prevState];
       state[index] = !state[index];
+      localStorage.setItem(`${task.id}_checkedState`, JSON.stringify(state));
       return state;
     });
   }
@@ -36,7 +40,13 @@ export default function ViewedTask({ task, onUpdateTask }) {
   function addTaskItemsHandler(event, taskItem) {
     event.preventDefault();
     if (taskItem) {
-      setTaskItems((prevItems) => [...prevItems, taskItem]);
+      setTaskItems((prevItems) => {
+        localStorage.setItem(
+          `${task.id}_items`,
+          JSON.stringify([...prevItems, taskItem])
+        );
+        return [...prevItems, taskItem];
+      });
       setTaskItem("");
     }
   }
@@ -45,8 +55,18 @@ export default function ViewedTask({ task, onUpdateTask }) {
     setTaskItems((prevItems) => {
       const updatedTaskItems = [...prevItems];
       updatedTaskItems.splice(index, 1);
+        localStorage.setItem(
+          `${task.id}_items`,
+          JSON.stringify(updatedTaskItems)
+        );
       return updatedTaskItems;
     });
+  setCheckedState((prevState) => {
+    const newState = [...prevState];
+    newState.splice(index, 1);
+      localStorage.setItem(`${task.id}_checkedState`, JSON.stringify(newState));
+    return newState
+  })
   }
 
   return (
