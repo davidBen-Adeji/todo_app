@@ -9,14 +9,28 @@ export default function Bin({ bin, onDeletePermanently, onRestoreTask }) {
     }
   }
 
-  return (
-    <>
-      <Title />
+  let binItemsComponent = (
+    <img
+      src={BinImg}
+      alt="bin image"
+      className="opacity-50 w-1/2 h-1/2 mx-auto mt-28"
+    />
+  );
+
+  if (bin.length > 0) {
+    binItemsComponent = (
       <BinItems
         bin={bin}
         onRestoreTask={onRestoreTask}
         onDeletePermanently={onDeletePermanently}
       />
+    );
+  }
+
+  return (
+    <>
+      <Title />
+      {binItemsComponent}
       <button
         className="absolute right-7 bottom-6 flex justify-center items-center bg-[#d9d9d9] w-14 h-14 rounded-full"
         type="button"
