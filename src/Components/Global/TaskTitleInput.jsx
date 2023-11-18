@@ -1,6 +1,6 @@
 import { inputChangeHandler } from "../../util/functions";
 
-export default function TaskTitle({ title, setTaskTitle, setTaskItem }) {
+export default function TaskTitleInput({ title, setTaskTitle, setTaskItem }) {
   return (
     <div className="mt-4 mb-8">
       <input
