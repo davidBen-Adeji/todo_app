@@ -26,8 +26,6 @@ export default function NewTask({ onAddTask }) {
     id,
   };
 
-  console.log(task.id);
-
   return (
     <>
       <TaskTitle
