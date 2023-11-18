@@ -67,17 +67,19 @@ export default function Main() {
     localStorage.setItem("index", JSON.stringify(index));
     setIndex(index);
   }
-  return <main className="bg-[#F5F5F5] relative px-7 pb-1">
-        <RoutesComponent
-          task={tasks[index]}
-          tasks={tasks}
-          bin={bin}
-          onChangeIndex={changeIndexHandler}
-          onAddTask={addTaskHandler}
-          onDeleteTask={deleteTaskHandler}
-          onUpdateTask={updateTaskHandler}
-          onRestoreTask={restoreTaskHandler}
-          onDeletePermanently={permanentDeleteHandler}
-        />
-  </main>;
+  return (
+    <main className="bg-[#F5F5F5] relative px-7 pb-1">
+      <RoutesComponent
+        task={tasks[index]}
+        tasks={tasks}
+        bin={bin}
+        onChangeIndex={changeIndexHandler}
+        onAddTask={addTaskHandler}
+        onDeleteTask={deleteTaskHandler}
+        onUpdateTask={updateTaskHandler}
+        onRestoreTask={restoreTaskHandler}
+        onDeletePermanently={permanentDeleteHandler}
+      />
+    </main>
+  );
 }
