@@ -28,8 +28,21 @@ function CustomLink({ to, children }) {
     linkClass += " opacity-70";
   }
 
+  function removeNewId() {
+    if ( !JSON.parse(localStorage.getItem("newId")) ) return;
+
+    const id = JSON.parse(localStorage.getItem("newId"));
+    localStorage.removeItem(`${id}_items`);
+    localStorage.removeItem(`${id}_checkedState`);
+    localStorage.removeItem("newId");
+  }
+
   return (
-    <Link className={linkClass} to={to} onClick={() => localStorage.removeItem("newId")}>
+    <Link
+      className={linkClass}
+      to={to}
+      onClick={removeNewId}
+    >
       {children}
     </Link>
   );
