@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { toggleCheckBoxHandler } from "../../util/functions";
 
 export default function Item({
@@ -8,11 +7,11 @@ export default function Item({
   checkedState,
   setCheckedState,
 }) {
-  let linkClass = "capitalize";
+  let clickedLabelClass = "opacity-100";
   let spanClass = "";
 
   if (checkedState) {
-    linkClass += " opacity-50";
+    clickedLabelClass = " opacity-50";
     spanClass = "block w-[70%] h-[70%] bg-black rounded-full cursor-pointer";
   }
 
@@ -31,11 +30,11 @@ export default function Item({
         htmlFor={inputId}
         className="flex justify-center items-center w-5 h-5 border-black border rounded-full cursor-pointer"
       >
-        <span className={spanClass}></span>
+        <span className={`${spanClass}`}></span>
       </label>
-      <Link to="" className={linkClass}>
+      <label htmlFor={inputId} className={`capitalize cursor-pointer hover:underline ${clickedLabelClass}`}>
         {item}
-      </Link>
+      </label>
     </div>
   );
 }

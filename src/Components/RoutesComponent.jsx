@@ -7,6 +7,7 @@ import ViewedTask from "./ViewedTask/ViewedTask.jsx";
 export default function RoutesComponent({
   task,
   tasks,
+  checkedState,
   bin,
   onChangeIndex,
   onAddTask,
@@ -14,6 +15,7 @@ export default function RoutesComponent({
   onUpdateTask,
   onRestoreTask,
   onDeletePermanently,
+  onToggleCheckBox,
 }) {
   return (
     <Routes>
@@ -22,8 +24,10 @@ export default function RoutesComponent({
         element={
           <Tasks
             tasks={tasks}
+            checkedState={checkedState}
             onChangeIndex={onChangeIndex}
             onDeleteTask={onDeleteTask}
+            onToggleCheckBox={onToggleCheckBox}
           />
         }
       />

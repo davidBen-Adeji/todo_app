@@ -1,23 +1,28 @@
-import { useState } from "react";
 import TaskImg from "../../assets/svg/task.svg";
 import Task from "./Task.jsx";
 import Header from "./Header.jsx";
 import NewTaskButton from "./NewTaskButton.jsx";
 
-export default function Tasks({ tasks, onChangeIndex, onDeleteTask }) {
-  const [checkedState, setCheckedState] = useState(
-    JSON.parse(localStorage.getItem("tasksCheckedState")) ||
-      new Array(tasks.length).fill(false)
-  );
+export default function Tasks({
+  tasks,
+  checkedState,
+  onChangeIndex,
+  onDeleteTask,
+  onToggleCheckBox,
+}) {
+  // const [checkedState, setCheckedState] = useState(
+  //   JSON.parse(localStorage.getItem("tasksCheckedState")) ||
+  //     new Array(tasks.length).fill(false)
+  // );
 
-  function toggleCheckBoxHandler(index, setCheckedState) {
-    setCheckedState((prevState) => {
-      const newState = [...prevState];
-      newState[index] = !newState[index];
-      localStorage.setItem("tasksCheckedState", JSON.stringify(newState));
-      return newState;
-    });
-  }
+  // function toggleCheckBoxHandler(index, setCheckedState) {
+  //   setCheckedState((prevState) => {
+  //     const newState = [...prevState];
+  //     newState[index] = !newState[index];
+  //     localStorage.setItem("tasksCheckedState", JSON.stringify(newState));
+  //     return newState;
+  //   });
+  // }
 
   let taskComponent = (
     <img
@@ -35,11 +40,9 @@ export default function Tasks({ tasks, onChangeIndex, onDeleteTask }) {
             to="/task"
             key={task.id}
             isChecked={checkedState[index]}
-            onToggleCheckBox={() =>
-              toggleCheckBoxHandler(index, setCheckedState)
-            }
+            onToggleCheckBox={() => onToggleCheckBox(index)}
             onChangeIndex={() => onChangeIndex(index)}
-            onDeleteTask={() => onDeleteTask(task, index, setCheckedState)}
+            onDeleteTask={() => onDeleteTask(task, index)}
           >
             {task.taskTitle}
           </Task>

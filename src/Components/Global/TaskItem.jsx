@@ -13,7 +13,6 @@ export default function TaskItem({
   return (
     <li
       className="relative bg-[#D9D9D9] mt-6 flex justify-between items-center gap-2 p-3 rounded-full"
-      key={`${item}_${Math.random()}`}
     >
       <Item
         id={id}

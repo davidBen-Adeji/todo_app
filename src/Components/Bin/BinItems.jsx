@@ -4,11 +4,12 @@ export default function BinItems({ bin, onRestoreTask, onDeletePermanently }) {
   return (
     <ul>
       {bin &&
-        bin.map((binItem) => (
+        bin.map((binItem, index) => (
           <BinItem
             key={binItem.id}
             title={binItem.taskTitle}
             item={binItem}
+            index={index}
             onRestoreTask={onRestoreTask}
             onDeletePermanently={onDeletePermanently}
           />

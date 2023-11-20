@@ -20,27 +20,42 @@ export function inputChangeHandler(
   }
 }
 
-export function addTaskItemHandler(event, taskItem, setTaskItems, setTaskItem, id) {
+export function addTaskItemHandler(
+  event,
+  taskItem,
+  setTaskItems,
+  setTaskItem,
+  id
+) {
   event.preventDefault();
-  if (taskItem) {
-    setTaskItems((prevItems) => {
-        localStorage.setItem(`${id}_items`, JSON.stringify([...prevItems, taskItem]))
-        return [...prevItems, taskItem]});
-    setTaskItem("");
-  }
+  if (!taskItem) return;
+  
+  setTaskItems((prevItems) => {
+    localStorage.setItem(
+      `${id}_items`,
+      JSON.stringify([...prevItems, taskItem])
+    );
+    return [...prevItems, taskItem];
+  });
+  setTaskItem("");
 }
 
-export function deleteTaskItemHandler(index, id, setTaskItems, setCheckedState) {
+export function deleteTaskItemHandler(
+  index,
+  id,
+  setTaskItems,
+  setCheckedState
+) {
   setTaskItems((prevItems) => {
     const updatedTaskItems = [...prevItems];
     updatedTaskItems.splice(index, 1);
-    localStorage.setItem(`${id}_items`, JSON.stringify(updatedTaskItems))
+    localStorage.setItem(`${id}_items`, JSON.stringify(updatedTaskItems));
     return updatedTaskItems;
   });
   setCheckedState((prevState) => {
     const newState = [...prevState];
     newState.splice(index, 1);
     localStorage.setItem(`${id}_checkedState`, JSON.stringify(newState));
-    return newState
-  })
+    return newState;
+  });
 }
