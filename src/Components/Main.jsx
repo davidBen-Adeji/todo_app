@@ -68,12 +68,11 @@ export default function Main() {
     });
   }
 
-  function permanentDeleteHandler(task, index) {
+  function permanentDeleteHandler(task) {
     localStorage.removeItem(`${task.id}_items`);
     localStorage.removeItem(`${task.id}_checkedState`);
     setBin((prevBin) => {
-      const updatedBin = [...prevBin];
-      updatedBin.splice(index, 1);
+      const updatedBin = prevBin.filter((item) => item.id !== task.id);
       localStorage.setItem("bin", JSON.stringify(updatedBin));
       return updatedBin;
     });

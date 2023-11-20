@@ -8,10 +8,8 @@ export default function BinItems({ bin, onRestoreTask, onDeletePermanently }) {
           <BinItem
             key={binItem.id}
             title={binItem.taskTitle}
-            item={binItem}
-            index={index}
-            onRestoreTask={onRestoreTask}
-            onDeletePermanently={onDeletePermanently}
+            onRestoreTask={() => onRestoreTask(binItem, index)}
+            onDeletePermanently={() => onDeletePermanently(binItem)}
           />
         ))}
     </ul>
