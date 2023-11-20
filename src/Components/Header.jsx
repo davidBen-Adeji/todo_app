@@ -28,6 +28,8 @@ function CustomLink({ to, children }) {
     linkClass += " opacity-70";
   }
 
+  // an id is automatically generated when create new task link is clicked on
+  // this removes the id if the operation is cancelled
   function removeNewId() {
     if ( !JSON.parse(localStorage.getItem("newId")) ) return;
 
