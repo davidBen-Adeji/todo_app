@@ -38,6 +38,7 @@ export default function ViewedTask({ task, onUpdateTask }) {
       <Form
         id={task.id}
         taskItem={taskItem}
+        setCheckedState={setCheckedState}
         setTaskItem={setTaskItem}
         setTaskItems={setTaskItems}
         setTaskTitle={setTaskTitle}

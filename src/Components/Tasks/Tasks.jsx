@@ -10,20 +10,7 @@ export default function Tasks({
   onDeleteTask,
   onToggleCheckBox,
 }) {
-  // const [checkedState, setCheckedState] = useState(
-  //   JSON.parse(localStorage.getItem("tasksCheckedState")) ||
-  //     new Array(tasks.length).fill(false)
-  // );
-
-  // function toggleCheckBoxHandler(index, setCheckedState) {
-  //   setCheckedState((prevState) => {
-  //     const newState = [...prevState];
-  //     newState[index] = !newState[index];
-  //     localStorage.setItem("tasksCheckedState", JSON.stringify(newState));
-  //     return newState;
-  //   });
-  // }
-
+  
   let taskComponent = (
     <img
       src={TaskImg}

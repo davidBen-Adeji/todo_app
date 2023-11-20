@@ -25,11 +25,12 @@ export function addTaskItemHandler(
   taskItem,
   setTaskItems,
   setTaskItem,
+  setCheckedState,
   id
 ) {
   event.preventDefault();
   if (!taskItem) return;
-  
+
   setTaskItems((prevItems) => {
     localStorage.setItem(
       `${id}_items`,
@@ -38,6 +39,13 @@ export function addTaskItemHandler(
     return [...prevItems, taskItem];
   });
   setTaskItem("");
+  setCheckedState((prevState) => {
+    localStorage.setItem(
+      `${id}_checkedState`,
+      JSON.stringify([...prevState, false])
+    );
+    return [...prevState, false];
+  });
 }
 
 export function deleteTaskItemHandler(

@@ -41,6 +41,7 @@ export default function NewTask({ onAddTask }) {
       <Form
         id={task.id}
         taskItem={taskItem}
+        setCheckedState={setCheckedState}
         setTaskItem={setTaskItem}
         setTaskItems={setTaskItems}
         setTaskTitle={setTaskTitle}

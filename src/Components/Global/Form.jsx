@@ -3,6 +3,7 @@ import { addTaskItemHandler, inputChangeHandler } from "../../util/functions";
 export default function Form({
   id,
   taskItem,
+  setCheckedState,
   setTaskItem,
   setTaskItems,
   setTaskTitle,
@@ -11,7 +12,7 @@ export default function Form({
     <form
       action=""
       onSubmit={(event) =>
-        addTaskItemHandler(event, taskItem, setTaskItems, setTaskItem, id)
+        addTaskItemHandler(event, taskItem, setTaskItems, setTaskItem, setCheckedState, id)
       }
     >
       <div className="flex items-end mt-10">
