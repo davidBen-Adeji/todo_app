@@ -36,6 +36,7 @@ export default function Main() {
       );
       return [false, ...prevState];
     });
+    localStorage.removeItem("newId");
   }
 
   function updateTaskHandler(updatedTask) {
