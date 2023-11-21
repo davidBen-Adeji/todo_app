@@ -80,8 +80,13 @@ export default function Main() {
 
   function restoreTaskHandler(task, index) {
     setTasks((prevTasks) => {
-      localStorage.setItem("bin", JSON.stringify([task, ...prevTasks]));
+      localStorage.setItem("tasks", JSON.stringify([task, ...prevTasks]));
       return [task, ...prevTasks];
+    });
+
+    setCheckedState((prevState) => {
+      localStorage.setItem("tasksCheckedState", JSON.stringify([false, ...prevState]));
+      return [false, ...prevState];
     });
 
     setBin((prevBin) => {
