@@ -103,7 +103,7 @@ export default function Main() {
     setIndex(index);
   }
   return (
-    <main className="bg-[#F5F5F5] relative px-7 pb-1">
+    <main className="bg-[#F5F5F5] relative px-7 pb-1 overflow-y-scroll">
       <RoutesComponent
         task={tasks[index]}
         tasks={tasks}
