@@ -1,6 +1,6 @@
 # TODO LIST APP
 
-#### Readme will be updated on monday.........hopefully
+#### Readme will undoubtedly be updated on wednesday.........hopefully
 
 <!--
 overview
