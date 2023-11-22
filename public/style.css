@@ -54,6 +54,7 @@ ol {
   max-height: 42.5rem;
   display: grid;
   grid-template-rows: 1fr 9fr;
+  position: relative;
 }
 
 @media (min-width: 56.31125rem) {

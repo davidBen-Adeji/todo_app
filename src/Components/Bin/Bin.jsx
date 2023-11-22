@@ -33,7 +33,7 @@ export default function Bin({ bin, onDeletePermanently, onRestoreTask }) {
       <Title />
       {binItemsComponent}
       <button
-        className="absolute right-7 bottom-6 flex justify-center items-center bg-[#d9d9d9] w-14 h-14 rounded-full"
+        className="absolute right-10 lappy:right-15 bottom-7 flex justify-center items-center bg-[#d9d9d9] w-14 h-14 rounded-full"
         type="button"
         onClick={onDeleteAll}
       >
