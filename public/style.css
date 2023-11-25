@@ -32,7 +32,7 @@ a:visited {
 body {
   margin: 0;
   padding: 0;
-  background-color: white;
+  background-color: #f5f5f5;
 }
 
 *,
@@ -55,6 +55,7 @@ ol {
   display: grid;
   grid-template-rows: 1fr 9fr;
   position: relative;
+  scrollbar-track-color: white;
 }
 
 @media (min-width: 56.31125rem) {

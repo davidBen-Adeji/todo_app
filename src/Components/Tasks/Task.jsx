@@ -14,7 +14,7 @@ export default function Task({
   const inputId = `checkbox_${Math.random()}`;
 
   return (
-    <li className="relative bg-[#D9D9D9] mt-6 flex justify-between items-center gap-2 p-3 rounded-full">
+    <li className="relative mt-8 flex justify-between items-center gap-2 px-10 py-5 shadow-lg rounded-full">
       <CheckBox
         id={inputId}
         isChecked={isChecked}

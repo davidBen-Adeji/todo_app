@@ -8,7 +8,7 @@ export default function Bin({ bin, onDeletePermanently, onRestoreTask }) {
       onDeletePermanently(b);
     }
   }
-  console.log(bin)
+  console.log(bin);
 
   let binItemsComponent = (
     <img
