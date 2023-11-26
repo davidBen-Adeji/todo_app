@@ -14,9 +14,9 @@ export const INITIAL_TASKS = [
     taskItems: ["milo", "milk", "sugar", "golden morn"],
     id: `${Math.random()}_${Math.random()}`,
   },
-  {
-    taskTitle: "School prep",
-    taskItems: ["note book", "iron uniform", "calculator", "polish shoes"],
-    id: `${Math.random()}_${Math.random()}`,
-  },
+  // {
+  //   taskTitle: "School prep",
+  //   taskItems: ["note book", "iron uniform", "calculator", "polish shoes"],
+  //   id: `${Math.random()}_${Math.random()}`,
+  // },
 ];
