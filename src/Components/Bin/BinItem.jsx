@@ -1,5 +1,5 @@
 import RestoreImg from "../../assets/svg/restore.svg";
-import BinImg from "../../assets/svg/bin.svg";
+import BinImg from "../../assets/svg/bin-green.svg";
 import { Link } from "react-router-dom";
 
 export default function BinItem({
@@ -8,8 +8,8 @@ export default function BinItem({
   onDeletePermanently,
 }) {
   return (
-    <li className="relative bg-[#D9D9D9] mt-6 flex justify-between items-center gap-2 p-3 rounded-full">
-      <Link to="" className="capitalize opacity-50 cursor-not-allowed">
+    <li className="relative mt-8 flex justify-between items-center gap-2 px-10 py-5 shadow-lg rounded-full">
+      <Link to="" className="capitalize opacity-50 line-through hover:line-through cursor-not-allowed">
         {title}
       </Link>{" "}
       <div className="flex items-center gap-2">

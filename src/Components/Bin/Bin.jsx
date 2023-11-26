@@ -1,4 +1,4 @@
-import BinImg from "../../assets/svg/bin.svg";
+import BinImg from "../../assets/svg/bin-white.svg";
 import Title from "./Title";
 import BinItems from "./BinItems";
 
@@ -8,7 +8,6 @@ export default function Bin({ bin, onDeletePermanently, onRestoreTask }) {
       onDeletePermanently(b);
     }
   }
-  console.log(bin);
 
   let binItemsComponent = (
     <img
@@ -33,11 +32,11 @@ export default function Bin({ bin, onDeletePermanently, onRestoreTask }) {
       <Title />
       {binItemsComponent}
       <button
-        className="absolute right-10 lappy:right-15 bottom-7 flex justify-center items-center bg-[#d9d9d9] w-14 h-14 rounded-full"
+        className="absolute bg-gradient-to-br from-jade-400 to-jade-600 hover:from-jade-500 hover:to-jade-700 right-10 lappy:right-16 bottom-14 lappy:bottom-7 flex justify-center items-center w-14 h-14 rounded-full text-5xl"
         type="button"
         onClick={onDeleteAll}
       >
-        <img src={BinImg} alt="bin" />
+        <img src={BinImg} className="w-[65%] h-[65%]" alt="bin" />
       </button>
     </>
   );

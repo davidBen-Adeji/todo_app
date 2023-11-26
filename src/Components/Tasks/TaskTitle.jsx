@@ -11,7 +11,7 @@ export default function TaskTitle({
   let spanClass = "";
 
   if (isChecked) {
-    clickedLinkClass = "opacity-50 cursor-not-allowed line-through hover:no-underline";
+    clickedLinkClass = "opacity-50 cursor-not-allowed line-through hover:line-through";
     spanClass = "block w-[70%] h-[70%] bg-gradient-to-br from-jade-200 to-jade-400 rounded-full cursor-pointer";
   }
 
