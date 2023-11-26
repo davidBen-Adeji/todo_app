@@ -67,3 +67,14 @@ export function deleteTaskItemHandler(
     return newState;
   });
 }
+
+  // an id is automatically generated when create new task link is clicked on
+  // this removes the id if the operation is cancelled
+  export function removeNewId() {
+    if ( !JSON.parse(localStorage.getItem("newId")) ) return;
+
+    const id = JSON.parse(localStorage.getItem("newId"));
+    localStorage.removeItem(`${id}_items`);
+    localStorage.removeItem(`${id}_checkedState`);
+    localStorage.removeItem("newId");
+  }

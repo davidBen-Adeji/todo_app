@@ -11,8 +11,8 @@ export default function Item({
   let spanClass = "";
 
   if (checkedState) {
-    clickedLabelClass = " opacity-50";
-    spanClass = "block w-[70%] h-[70%] bg-black rounded-full cursor-pointer";
+    clickedLabelClass = "line-through hover:line-through opacity-50";
+    spanClass = "block w-[70%] h-[70%] bg-gradient-to-br from-jade-200 to-jade-400 rounded-full cursor-pointer";
   }
 
   const inputId = `checkbox_${Math.random()}`;
@@ -28,7 +28,7 @@ export default function Item({
       />{" "}
       <label
         htmlFor={inputId}
-        className="flex justify-center items-center w-5 h-5 border-black border rounded-full cursor-pointer"
+        className="flex justify-center items-center w-5 h-5 transition duration-200 hover:scale-110 focus:scale-110 border-jade-700 border rounded-full cursor-pointer"
       >
         <span className={`${spanClass}`}></span>
       </label>

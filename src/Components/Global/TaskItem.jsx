@@ -1,4 +1,4 @@
-import BinImg from "../../assets/svg/bin.svg";
+import BinImg from "../../assets/svg/bin-green.svg";
 import { deleteTaskItemHandler } from "../../util/functions";
 import Item from "./Item";
 
@@ -12,7 +12,7 @@ export default function TaskItem({
 }) {
   return (
     <li
-      className="relative bg-[#D9D9D9] mt-6 flex justify-between items-center gap-2 p-3 rounded-full"
+      className="relative mt-8 flex justify-between items-center gap-2 px-10 py-5 shadow-lg rounded-full"
     >
       <Item
         id={id}
