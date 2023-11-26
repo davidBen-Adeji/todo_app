@@ -1,4 +1,4 @@
-import BinImg from '../../assets/svg/bin-red.svg'
+import BinImg from '../../assets/svg/bin-green.svg'
 
 export default function DeleteTaskButton({ onDeleteTask }) {
   return (
