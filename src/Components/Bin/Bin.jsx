@@ -1,4 +1,5 @@
 import BinImg from "../../assets/svg/bin-white.svg";
+import BlackBinImg from "../../assets/svg/bin.svg"
 import Title from "./Title";
 import BinItems from "./BinItems";
 
@@ -11,7 +12,7 @@ export default function Bin({ bin, onDeletePermanently, onRestoreTask }) {
 
   let binItemsComponent = (
     <img
-      src={BinImg}
+      src={BlackBinImg}
       alt="bin image"
       className="opacity-50 w-1/2 h-1/2 mx-auto mt-28"
     />
