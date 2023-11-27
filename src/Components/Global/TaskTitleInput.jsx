@@ -4,7 +4,7 @@ export default function TaskTitleInput({ title, setTaskTitle, setTaskItem }) {
   return (
     <div className="mt-4 mb-8">
       <input
-        className=" bg-white w-[70%] border-b border-black py-2 px-1 capitalize outline-none text-3xl"
+        className=" bg-white w-[75%] border-b border-jade-500 py-2 shadow-md px-4 capitalize outline-none text-3xl rounded-full"
         type="text"
         value={title}
         placeholder="Add title here"
