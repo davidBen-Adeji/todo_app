@@ -1,13 +1,7 @@
-import Header from './Components/Header/Header.jsx';
-import Main from "./Components/Main.jsx";
+import TodoApp from "./Components/TodoApp.jsx";
 
 function App() {
-  return (
-    <>
-      <Header />
-      <Main />
-    </>
-  );
+  return <TodoApp />;
 }
 
 export default App;

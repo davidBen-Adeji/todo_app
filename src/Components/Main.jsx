@@ -2,7 +2,7 @@ import { useState } from "react";
 import { INITIAL_TASKS } from "../util/INITIAL_TASKS";
 import RoutesComponent from "./RoutesComponent.jsx";
 
-export default function Main() {
+export default function Main({ onUpdateUndoneTasksLength, onUpdateBinLength }) {
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem("tasks")) || INITIAL_TASKS
   );
@@ -14,6 +14,16 @@ export default function Main() {
     JSON.parse(localStorage.getItem("index")) || 0
   );
   const [bin, setBin] = useState(JSON.parse(localStorage.getItem("bin")) || []);
+  const undoneTasks = [];
+
+  for (const state of checkedState) {
+    if (!state) {
+      undoneTasks.push(state);
+    }
+  }
+
+  onUpdateUndoneTasksLength(undoneTasks.length);
+  onUpdateBinLength(bin.length)
 
   function toggleCheckBoxHandler(index) {
     setCheckedState((prevState) => {
@@ -86,7 +96,10 @@ export default function Main() {
     });
 
     setCheckedState((prevState) => {
-      localStorage.setItem("tasksCheckedState", JSON.stringify([false, ...prevState]));
+      localStorage.setItem(
+        "tasksCheckedState",
+        JSON.stringify([false, ...prevState])
+      );
       return [false, ...prevState];
     });
 

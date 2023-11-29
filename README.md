@@ -11,5 +11,8 @@ installation instructions
  updates to add
  author
   -->
-<!-- optimise position of add task button and empty bin button
+<!-- 
+text-break
+draggable
+optimise position of add task button and empty bin button
     use a better bin image -->
