@@ -23,7 +23,7 @@ export default function Main({ onUpdateUndoneTasksLength, onUpdateBinLength }) {
   }
 
   onUpdateUndoneTasksLength(undoneTasks.length);
-  onUpdateBinLength(bin.length)
+  onUpdateBinLength(bin.length);
 
   function toggleCheckBoxHandler(index) {
     setCheckedState((prevState) => {

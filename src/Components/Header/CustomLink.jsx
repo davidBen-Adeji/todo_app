@@ -4,8 +4,7 @@ import { removeNewId } from "../../util/functions";
 export default function CustomLink({ to, children }) {
   const resolvedPath = useResolvedPath(to);
   const isActive = useMatch({ path: resolvedPath.pathname, end: true });
-  let opacityClass =
-    "opacity-80";
+  let opacityClass = "opacity-80";
   if (isActive) {
     opacityClass = "opacity-100";
   }

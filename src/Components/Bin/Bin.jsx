@@ -1,5 +1,5 @@
 import BinImg from "../../assets/svg/bin-white.svg";
-import BlackBinImg from "../../assets/svg/bin.svg"
+import BlackBinImg from "../../assets/svg/bin.svg";
 import Title from "./Title";
 import BinItems from "./BinItems";
 

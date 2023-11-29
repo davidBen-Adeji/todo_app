@@ -43,7 +43,7 @@ export default function ViewedTask({ task, onUpdateTask }) {
         setTaskTitle={setTaskTitle}
       />
 
-    <DoneButton onUpdateTask={() => onUpdateTask(updatedTask)} />
+      <DoneButton onUpdateTask={() => onUpdateTask(updatedTask)} />
     </>
   );
 }

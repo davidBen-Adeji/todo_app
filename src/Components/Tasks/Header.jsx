@@ -1,4 +1,4 @@
-import TaskImg from '../../assets/svg/task.svg'
+import TaskImg from "../../assets/svg/task.svg";
 
 export default function Header() {
   return (

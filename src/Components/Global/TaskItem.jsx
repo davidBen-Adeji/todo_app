@@ -11,9 +11,7 @@ export default function TaskItem({
   setTaskItems,
 }) {
   return (
-    <li
-      className="relative mt-8 flex justify-between items-center gap-2 px-10 py-5 shadow-lg rounded-full"
-    >
+    <li className="relative mt-8 flex justify-between items-center gap-2 px-10 py-5 shadow-lg rounded-full">
       <Item
         id={id}
         index={index}

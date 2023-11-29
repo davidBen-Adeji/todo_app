@@ -10,7 +10,6 @@ export default function Tasks({
   onDeleteTask,
   onToggleCheckBox,
 }) {
-  
   let taskComponent = (
     <img
       src={TaskImg}

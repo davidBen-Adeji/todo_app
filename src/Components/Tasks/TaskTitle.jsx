@@ -11,8 +11,10 @@ export default function TaskTitle({
   let spanClass = "";
 
   if (isChecked) {
-    clickedLinkClass = "opacity-50 cursor-not-allowed line-through hover:line-through";
-    spanClass = "block w-[70%] h-[70%] bg-gradient-to-br from-jade-200 to-jade-400 rounded-full cursor-pointer";
+    clickedLinkClass =
+      "opacity-50 cursor-not-allowed line-through hover:line-through";
+    spanClass =
+      "block w-[70%] h-[70%] bg-gradient-to-br from-jade-200 to-jade-400 rounded-full cursor-pointer";
   }
 
   return (
@@ -23,7 +25,11 @@ export default function TaskTitle({
       >
         <span className={`${spanClass}`}></span>
       </label>
-      <Link to={path} onClick={onChangeIndex} className={`capitalize hover:underline ${clickedLinkClass}`}>
+      <Link
+        to={path}
+        onClick={onChangeIndex}
+        className={`capitalize hover:underline ${clickedLinkClass}`}
+      >
         {children}
       </Link>
     </div>

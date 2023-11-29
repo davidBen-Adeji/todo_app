@@ -4,7 +4,7 @@ import DoneImg from "../../assets/svg/done.svg";
 import { Link } from "react-router-dom";
 import { removeNewId } from "../../util/functions";
 
-export default function Buttons({ onAddTask}) {
+export default function Buttons({ onAddTask }) {
   return (
     <div className="absolute w-14 right-8 bottom-14 lappy:right-16 lappy:bottom-7 flex flex-col justify-center items-center gap-4">
       <Link

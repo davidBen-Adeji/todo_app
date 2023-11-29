@@ -1,4 +1,4 @@
-import BinImg from '../../assets/svg/bin.svg';
+import BinImg from "../../assets/svg/bin.svg";
 
 export default function Title() {
   return (

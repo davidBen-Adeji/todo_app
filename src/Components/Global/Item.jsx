@@ -12,7 +12,8 @@ export default function Item({
 
   if (checkedState) {
     clickedLabelClass = "line-through hover:line-through opacity-50";
-    spanClass = "block w-[70%] h-[70%] bg-gradient-to-br from-jade-200 to-jade-400 rounded-full cursor-pointer";
+    spanClass =
+      "block w-[70%] h-[70%] bg-gradient-to-br from-jade-200 to-jade-400 rounded-full cursor-pointer";
   }
 
   const inputId = `checkbox_${Math.random()}`;
@@ -32,7 +33,10 @@ export default function Item({
       >
         <span className={`${spanClass}`}></span>
       </label>
-      <label htmlFor={inputId} className={`capitalize cursor-pointer hover:underline ${clickedLabelClass}`}>
+      <label
+        htmlFor={inputId}
+        className={`capitalize cursor-pointer hover:underline ${clickedLabelClass}`}
+      >
         {item}
       </label>
     </div>
