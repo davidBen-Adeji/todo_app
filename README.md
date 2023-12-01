@@ -31,9 +31,9 @@ https://github.com/davidBen-Adeji/todo_app/assets/56682853/29d1247c-c82d-4a9f-b8
 
 ## My process
 ### Built with
--React
--Tailwind
--Mobile-first workflow
+- React
+- Tailwind
+- Mobile-first workflow
 
 ## License
 Copyright © 2023 [David Ben-Adeji](https://github.com/davidBen-Adeji/todo_app/).
