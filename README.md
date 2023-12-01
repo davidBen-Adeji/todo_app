@@ -1,18 +1,12 @@
 # TODO LIST APP
 
-#### Readme will undoubtedly be updated on wednesday.........hopefully
+A simple todo list app to add, edit, and delete tasks
 
-<!--
-overview
-link to site
-installation instructions
- Built with
- feautures
- updates to add
- author
-  -->
-<!-- 
-text-break
-draggable
-optimise position of add task button and empty bin button
-    use a better bin image -->
+## Installation Instructions
+
+- Fork this repository
+- Clone your forked repository into your local machine `git clone https://github.com/<username>/<repositoryName>.git`
+- Go into your just cloned repository
+- Install dependencies `npm i`
+- Type the following commands in your terminal `npm run dev`
+- Follow the created link. It will probably be `localhost:5173`
