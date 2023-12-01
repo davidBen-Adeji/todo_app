@@ -14,15 +14,17 @@ export default function Main({ onUpdateUndoneTasksLength, onUpdateBinLength }) {
     JSON.parse(localStorage.getItem("index")) || 0
   );
   const [bin, setBin] = useState(JSON.parse(localStorage.getItem("bin")) || []);
-  const undoneTasks = [];
+  let undoneTasksLength = 0;
 
   for (const state of checkedState) {
     if (!state) {
-      undoneTasks.push(state);
+      undoneTasksLength++;
     }
   }
 
-  onUpdateUndoneTasksLength(undoneTasks.length);
+
+
+  onUpdateUndoneTasksLength(undoneTasksLength);
   onUpdateBinLength(bin.length);
 
   function toggleCheckBoxHandler(index) {
