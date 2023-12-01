@@ -2,6 +2,17 @@
 
 A simple todo list app to add, edit, and delete tasks
 
+##Table of Contents
+- [Installation Instructions](#installation-instructions)
+- [Feautures](#features)
+  - [Create a new task](#create-a-new-task)
+  - [Edit Task](#edit-task)
+  - [Delete Task](#delete-task)
+  - [Restore Task](#restore-task)
+- [My Process](#my-process)
+  -[Built with](#built-with)
+-[License](#license)
+
 ## Installation Instructions
 
 - Fork this repository
@@ -37,4 +48,5 @@ https://github.com/davidBen-Adeji/todo_app/assets/56682853/29d1247c-c82d-4a9f-b8
 
 ## License
 Copyright © 2023 [David Ben-Adeji](https://github.com/davidBen-Adeji/todo_app/).
+
 This project is [MIT](./LICENSE) licensed.
