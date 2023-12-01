@@ -10,8 +10,8 @@ A simple todo list app to add, edit, and delete tasks
   - [Delete Task](#delete-task)
   - [Restore Task](#restore-task)
 - [My Process](#my-process)
-  -[Built with](#built-with)
--[License](#license)
+  - [Built with](#built-with)
+- [License](#license)
 
 ## Installation Instructions
 
