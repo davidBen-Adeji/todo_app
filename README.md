@@ -12,7 +12,12 @@ A simple todo list app to add, edit, and delete tasks
 - Follow the created link. It will probably be `localhost:5173`
 
 ## Features
+
 ### Create a new task
 
 https://github.com/davidBen-Adeji/todo_app/assets/56682853/dc74b94b-3166-4506-b2fb-82a6a661da06
+
+### Edit Task
+
+https://github.com/davidBen-Adeji/todo_app/assets/56682853/c354def4-5330-4359-8301-fbb61c60e2b7
 
