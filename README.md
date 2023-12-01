@@ -19,5 +19,22 @@ https://github.com/davidBen-Adeji/todo_app/assets/56682853/dc74b94b-3166-4506-b2
 
 ### Edit Task
 
-https://github.com/davidBen-Adeji/todo_app/assets/56682853/c354def4-5330-4359-8301-fbb61c60e2b7
+https://github.com/davidBen-Adeji/todo_app/assets/56682853/12a3cbb5-4816-4255-b8f7-859893c08759
 
+### Delete Task
+
+https://github.com/davidBen-Adeji/todo_app/assets/56682853/60a8bac4-31e1-480b-b819-6585ba1b4d03
+
+### Restore Task
+
+https://github.com/davidBen-Adeji/todo_app/assets/56682853/29d1247c-c82d-4a9f-b8b2-761039adcbf8
+
+## My process
+### Built with
+-React
+-Tailwind
+-Mobile-first workflow
+
+## License
+Copyright © 2023 [David Ben-Adeji](https://github.com/davidBen-Adeji/todo_app/).
+This project is [MIT](./LICENSE) licensed.
