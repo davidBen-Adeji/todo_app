@@ -21,17 +21,17 @@ export default function TodoApp() {
     if (!state) undoneTasksLength++;
   }
 
-  const idCheckedState = JSON.parse(
-    localStorage.getItem(`${tasks[index].id}_checkedState`)
-  );
-  let isAllTaskItemsChecked = false;
+  // const idCheckedState = JSON.parse(
+  //   localStorage.getItem(`${tasks[index].id}_checkedState`)
+  // );
+  // let isAllTaskItemsChecked = false;
 
-  if (idCheckedState) {
-    for (const state of idCheckedState) {
-      if (state) isAllTaskItemsChecked = true;
-      else isAllTaskItemsChecked = false;
-    }
-  }
+  // if (idCheckedState) {
+  //   for (const state of idCheckedState) {
+  //     if (state) isAllTaskItemsChecked = true;
+  //     else isAllTaskItemsChecked = false;
+  //   }
+  // }
 
   // if (isAllTaskItemsChecked) {
   //   setCheckedState((prevState) => {
