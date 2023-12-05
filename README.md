@@ -2,7 +2,7 @@
 
 A simple todo list app to add, edit, and delete tasks
 
-##Table of Contents
+## Table of Contents
 - [Installation Instructions](#installation-instructions)
 - [Feautures](#features)
   - [Create a new task](#create-a-new-task)
