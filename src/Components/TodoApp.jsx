@@ -21,27 +21,6 @@ export default function TodoApp() {
     if (!state) undoneTasksLength++;
   }
 
-  // const idCheckedState = JSON.parse(
-  //   localStorage.getItem(`${tasks[index].id}_checkedState`)
-  // );
-  // let isAllTaskItemsChecked = false;
-
-  // if (idCheckedState) {
-  //   for (const state of idCheckedState) {
-  //     if (state) isAllTaskItemsChecked = true;
-  //     else isAllTaskItemsChecked = false;
-  //   }
-  // }
-
-  // if (isAllTaskItemsChecked) {
-  //   setCheckedState((prevState) => {
-  //     const newState = [...prevState];
-  //     newState[index] = !newState[index];
-  //     localStorage.setItem("tasksCheckedState", JSON.stringify(newState));
-  //     return newState;
-  //   });
-  // }
-
   function toggleCheckBoxHandler(index) {
     setCheckedState((prevState) => {
       const newState = [...prevState];
