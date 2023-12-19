@@ -10,8 +10,9 @@ export default function Item({
   setCheckedState,
 }) {
   let clickedLabelClass = "opacity-100";
-  let checkboxColor = classes.checkboxGreen;
-  let spanColor = classes.spanGreen;
+  let checkboxColor = classes.checkboxBlue;
+  let spanColor = classes.spanBlue;
+  let labelColor = classes.labelBlue;
 
   if (checkedState) {
     clickedLabelClass = classes.taskItemLabelClicked;
@@ -38,7 +39,7 @@ export default function Item({
       </label>
       <label
         htmlFor={inputId}
-        className={`${classes.taskItemLabel} ${clickedLabelClass}`}
+        className={`${classes.taskItemLabel} ${labelColor} ${clickedLabelClass}`}
       >
         {item}
       </label>

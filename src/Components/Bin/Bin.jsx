@@ -6,7 +6,7 @@ import BinItems from "./BinItems";
 import classes from "./Bin.module.css";
 
 export default function Bin({ bin, onDeletePermanently, onRestoreTask }) {
-  let btnColor = classes.btnGreen;
+  let btnColor = classes.btnBlue;
   
   function onDeleteAll() {
     for (const b of bin) {

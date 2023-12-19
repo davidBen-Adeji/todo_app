@@ -8,8 +8,8 @@ export default function Header({ undoneTasksLength, binLength }) {
   let tasksOpacityClass = "opacity-0";
   let binOpacityClass = "opacity-0";
 
-  let bgColor = classes.headerGreen;
-  let lengthBgColor = classes.lengthBgWhite;
+  let bgColor = classes.headerBlue;
+  let lengthColor = classes.lengthBlue;
 
   if (undoneTasksLength > 0) {
     tasksOpacityClass = "opacity-100";
@@ -25,7 +25,7 @@ export default function Header({ undoneTasksLength, binLength }) {
         <img className={classes.taskImg} src={TaskImg} alt="tasks" />
         <p className="text-white mb-0.5">Tasks</p>
         <p
-          className={`mb-1 ${classes.headerLengths} ${lengthBgColor} ${tasksOpacityClass}`}
+          className={`mb-1 ${classes.headerLengths} ${lengthColor} ${tasksOpacityClass}`}
         >
           {undoneTasksLength}
         </p>
@@ -34,7 +34,7 @@ export default function Header({ undoneTasksLength, binLength }) {
         <img className={classes.binImg} src={BinImg} alt="bin" />
         <p className="text-white">Bin</p>
         <p
-          className={`mb-0.5 ${classes.headerLengths} ${lengthBgColor} ${binOpacityClass}`}
+          className={`mb-0.5 ${classes.headerLengths} ${lengthColor} ${binOpacityClass}`}
         >
           {binLength}
         </p>

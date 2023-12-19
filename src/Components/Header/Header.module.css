@@ -22,6 +22,14 @@
   );
 }
 
+.headerBlue {
+  background: linear-gradient(
+    to bottom right,
+    var(--mariner-400),
+    var(--mariner-800)
+  );
+}
+
 .headerLengths {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -32,11 +40,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 
-.lengthBgWhite {
+.lengthGreen {
   color: var(--jade-600);
-  background-color: white;
+}
+
+.lengthBlue {
+  color: var(--mariner-600);
 }
 
 .taskImg {

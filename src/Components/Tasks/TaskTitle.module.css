@@ -21,6 +21,10 @@
   border: 1px solid var(--jade-700);
 }
 
+.checkboxBlue {
+  border: 1px solid var(--mariner-600);
+}
+
 .taskTitleSpan {
   display: block;
   width: 70%;
@@ -37,11 +41,23 @@
   );
 }
 
+.spanBlue {
+  background: linear-gradient(
+    to bottom right,
+    var(--mariner-400),
+    var(--mariner-600)
+  );
+}
+
 .taskTitleLink {
   text-transform: capitalize;
 }
 .taskTitleLink:hover {
   text-decoration: underline;
+}
+
+.linkBlue {
+  color: var(--mariner-900);
 }
 
 .taskTitleLinkClicked {

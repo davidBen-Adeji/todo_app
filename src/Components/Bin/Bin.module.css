@@ -32,12 +32,26 @@
     var(--jade-600)
   ) !important;
 }
-
 .btnGreen:hover {
   background-image: linear-gradient(
     to bottom right,
     var(--jade-500),
     var(--jade-700)
+  ) !important;
+}
+
+.btnBlue {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--mariner-400),
+    var(--mariner-600)
+  ) !important;
+}
+.btnBlue:hover {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--mariner-500),
+    var(--mariner-700)
   ) !important;
 }
 

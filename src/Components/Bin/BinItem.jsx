@@ -1,5 +1,7 @@
-import RestoreImg from "../../assets/svg/restore.svg";
-import BinImg from "../../assets/svg/bin-green.svg";
+// import RestoreImg from "../../assets/svg/restore.svg";
+import RestoreImgBlue from "../../assets/svg/restore-blue.svg";
+// import BinImg from "../../assets/svg/bin-green.svg";
+import BinImgBlue from "../../assets/svg/bin-blue.svg";
 import { Link } from "react-router-dom";
 
 import classes from "./BinItem.module.css";
@@ -15,10 +17,10 @@ export default function BinItem({ title, onRestoreTask, onDeletePermanently }) {
       </Link>{" "}
       <div className={classes.buttons}>
         <button type="button" onClick={onRestoreTask}>
-          <img className={classes.button} src={RestoreImg} alt="restore" />
+          <img className={classes.button} src={RestoreImgBlue} alt="restore" />
         </button>
         <button type="button" onClick={onDeletePermanently}>
-          <img className={classes.button} src={BinImg} alt="bin" />
+          <img className={classes.button} src={BinImgBlue} alt="bin" />
         </button>
       </div>
     </li>

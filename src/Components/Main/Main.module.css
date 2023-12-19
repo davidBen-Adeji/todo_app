@@ -6,3 +6,7 @@
 .bgWhite {
     background-color: white;
 }
+
+.bgBlue {
+    background-color: var(--mariner-50);
+}

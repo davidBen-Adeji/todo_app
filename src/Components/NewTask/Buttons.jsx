@@ -7,7 +7,7 @@ import { removeNewId } from "../../util/functions";
 import classes from "./Buttons.module.css";
 
 export default function Buttons({ onAddTask }) {
-  let bgColor = classes.bgGreen;
+  let bgColor = classes.bgBlue;
   
   return (
     <div className={classes.buttons}>

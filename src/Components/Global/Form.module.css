@@ -10,13 +10,17 @@
 }
 
 .inputGroupText {
-  background-color: white;
+  background: none;
   width: 75%;
   text-transform: capitalize;
   padding: 0.5rem 0.75rem;
   /* outline: 0; */
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.textBlue {
+  color: var(--mariner-900);
 }
 
 .inputGroupBtn {
@@ -46,6 +50,21 @@
     to bottom right,
     var(--jade-500),
     var(--jade-700)
+  ) !important;
+}
+
+.btnBlue {
+  background: linear-gradient(
+    to bottom right,
+    var(--mariner-400),
+    var(--mariner-600)
+  ) !important;
+}
+.btnBlue:hover {
+  background: linear-gradient(
+    to bottom right,
+    var(--mariner-500),
+    var(--mariner-700)
   ) !important;
 }
 

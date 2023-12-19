@@ -11,7 +11,8 @@ export default function Form({
   setTaskItems,
   setTaskTitle,
 }) {
-  let btnColor = classes.btnGreen;
+  let btnColor = classes.btnBlue;
+  let textColor = classes.textBlue
 
   return (
     <form
@@ -30,7 +31,7 @@ export default function Form({
     >
       <div className={classes.inputGroup}>
         <input
-          className={`${classes.inputGroupText} rounded-full`}
+          className={`${classes.inputGroupText} ${textColor} rounded-full`}
           type="text"
           value={taskItem}
           placeholder="Add items here"

@@ -1,4 +1,5 @@
-import TaskImg from "../../assets/svg/task.svg";
+// import TaskImg from "../../assets/svg/task.svg";
+import TaskImgBlue from "../../assets/svg/task-blue.svg";
 import Task from "./Task.jsx";
 import Header from "./Header.jsx";
 import NewTaskButton from "./NewTaskButton.jsx";
@@ -14,7 +15,7 @@ export default function Tasks({
 }) {
   let taskComponent = (
     <img
-      src={TaskImg}
+      src={TaskImgBlue}
       alt="task image"
       className={classes.taskImg}
     />

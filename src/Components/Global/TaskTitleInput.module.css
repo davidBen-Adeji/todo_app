@@ -4,7 +4,7 @@
 }
 
 .taskTitleInputText {
-    background-color: white;
+    background: none;
     width: 75%;
     padding: 0.5rem 1rem;
     text-transform: capitalize;
@@ -14,6 +14,11 @@
     line-height: 2.25rem;
 }
 
-.inputTextGreen {
+.inputGreen {
     border-bottom: 1px solid var(--jade-500);
+}
+
+.inputBlue {
+    color: var(--mariner-900);
+    border-bottom: 1px solid var(--mariner-500);
 }

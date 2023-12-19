@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import classes from "./DoneButton.module.css";
 
 export default function DoneButton({ onUpdateTask }) {
-  let btnColor = classes.btnGreen;
+  let btnColor = classes.btnBlue;
   
   return (
     <Link

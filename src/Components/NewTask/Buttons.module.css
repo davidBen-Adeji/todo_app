@@ -26,6 +26,16 @@
     background: linear-gradient(to bottom right, var(--jade-500), var(--jade-700));
 }
 
+.bgBlue{
+    background: linear-gradient(to bottom right, var(--mariner-400), var(--mariner-600));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bgBlue:hover, .bgBlue:focus {
+    background: linear-gradient(to bottom right, var(--mariner-500), var(--mariner-700));
+}
+
 .cancel {
     width: 1.75rem;
     height: 1.75rem;
