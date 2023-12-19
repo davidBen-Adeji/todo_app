@@ -27,6 +27,10 @@
   border: 1px solid var(--mariner-600);
 }
 
+.checkboxOrange {
+  border: 1px solid var(--web-orange-700);
+}
+
 .taskItemCustomCheckbox:hover,
 .taskItemCustomCheckbox:focus {
   transform: scale(105%);
@@ -56,6 +60,14 @@
   );
 }
 
+.spanOrange {
+  background: linear-gradient(
+    to bottom right,
+    var(--web-orange-500),
+    var(--web-orange-700)
+  );
+}
+
 .taskItemLabel {
   text-transform: capitalize;
   cursor: pointer;
@@ -73,5 +85,9 @@
 }
 
 .labelBlue {
-    color: var(--mariner-900);
-  }
+  color: var(--mariner-900);
+}
+
+.labelOrange {
+  color: var(--web-orange-900);
+}

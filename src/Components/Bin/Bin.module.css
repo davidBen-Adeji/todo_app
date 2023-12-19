@@ -55,6 +55,21 @@
   ) !important;
 }
 
+.btnOrange {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--web-orange-400),
+    var(--web-orange-600)
+  ) !important;
+}
+.btnOrange:hover {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--web-orange-500),
+    var(--web-orange-700)
+  ) !important;
+}
+
 .binImg {
   width: 65%;
   height: 65%;

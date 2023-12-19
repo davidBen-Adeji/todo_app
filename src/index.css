@@ -28,6 +28,19 @@
   --mariner-800: #2b56a2;
   --mariner-900: #284a80;
   --mariner-950: #1c2f4f;
+
+  /* orange */
+  --web-orange-50: #fffcea;
+  --web-orange-100: #fff5c5;
+  --web-orange-200: #ffec85;
+  --web-orange-300: #ffdb46;
+  --web-orange-400: #ffc81b;
+  --web-orange-500: #ffa600;
+  --web-orange-600: #e27d00;
+  --web-orange-700: #bb5602;
+  --web-orange-800: #984208;
+  --web-orange-900: #7c370b;
+  --web-orange-950: #481b00;
 }
 
 .text-white {

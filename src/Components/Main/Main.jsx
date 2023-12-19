@@ -14,7 +14,7 @@ export default function Main({
   onDeletePermanently,
   onToggleCheckBox,
 }) {
-  let bgColor = classes.bgBlue;
+  let bgColor = classes.bgOrange;
 
   return (
     <main className={`${classes.main} ${bgColor}`}>

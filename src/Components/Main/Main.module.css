@@ -10,3 +10,7 @@
 .bgBlue {
     background-color: var(--mariner-50);
 }
+
+.bgOrange {
+    background-color: var(--web-orange-50);
+}

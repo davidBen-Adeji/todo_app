@@ -1,5 +1,6 @@
 // import BinImg from "../../assets/svg/bin-green.svg";
-import BinImgBlue from "../../assets/svg/bin-blue.svg";
+// import BinImgBlue from "../../assets/svg/bin-blue.svg";
+import BinImgOrange from "../../assets/svg/bin-orange.svg";
 import { deleteTaskItemHandler } from "../../util/functions";
 import Item from "./Item";
 
@@ -28,7 +29,7 @@ export default function TaskItem({
           deleteTaskItemHandler(index, id, setTaskItems, setCheckedState)
         }
       >
-        <img className={classes.deleteButton} src={BinImgBlue} alt="bin" />
+        <img className={classes.deleteButton} src={BinImgOrange} alt="bin" />
       </button>
     </li>
   );

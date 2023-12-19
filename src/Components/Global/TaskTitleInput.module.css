@@ -22,3 +22,8 @@
     color: var(--mariner-900);
     border-bottom: 1px solid var(--mariner-500);
 }
+
+.inputOrange {
+    color: var(--web-orange-900);
+    border-bottom: 1px solid var(--web-orange-500);
+}

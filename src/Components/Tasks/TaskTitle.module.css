@@ -25,6 +25,10 @@
   border: 1px solid var(--mariner-600);
 }
 
+.checkboxOrange {
+  border: 1px solid var(--web-orange-700);
+}
+
 .taskTitleSpan {
   display: block;
   width: 70%;
@@ -49,6 +53,14 @@
   );
 }
 
+.spanOrange {
+  background: linear-gradient(
+    to bottom right,
+    var(--web-orange-500),
+    var(--web-orange-700)
+  );
+}
+
 .taskTitleLink {
   text-transform: capitalize;
 }
@@ -58,6 +70,10 @@
 
 .linkBlue {
   color: var(--mariner-900);
+}
+
+.linkOrange {
+  color: var(--web-orange-900);
 }
 
 .taskTitleLinkClicked {

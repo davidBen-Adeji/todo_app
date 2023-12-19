@@ -9,5 +9,12 @@
 .headerText {
     font-size: 1.875rem;
     line-height: 2.25rem;
+}
+
+.textBlue {
     color: var(--mariner-900);
+}
+
+.textOrange {
+    color: var(--web-orange-900);
 }

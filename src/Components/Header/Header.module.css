@@ -30,6 +30,14 @@
   );
 }
 
+.headerOrange {
+  background: linear-gradient(
+    to bottom right,
+    var(--web-orange-500),
+    var(--web-orange-800)
+  );
+}
+
 .headerLengths {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -49,6 +57,10 @@
 
 .lengthBlue {
   color: var(--mariner-600);
+}
+
+.lengthOrange {
+  color: var(--web-orange-600);
 }
 
 .taskImg {

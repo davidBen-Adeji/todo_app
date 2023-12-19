@@ -36,6 +36,16 @@
     background: linear-gradient(to bottom right, var(--mariner-500), var(--mariner-700));
 }
 
+.bgOrange{
+    background: linear-gradient(to bottom right, var(--web-orange-400), var(--web-orange-600));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bgOrange:hover, .bgBlue:focus {
+    background: linear-gradient(to bottom right, var(--web-orange-500), var(--web-orange-700));
+}
+
 .cancel {
     width: 1.75rem;
     height: 1.75rem;

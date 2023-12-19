@@ -9,10 +9,9 @@ export default function TaskTitle({
   onChangeIndex,
   children,
 }) {
-
-  let checkboxColor = classes.checkboxBlue;
-  let spanColor = classes.spanBlue;
-  let linkColor = classes.linkBlue;
+  let checkboxColor = classes.checkboxOrange;
+  let spanColor = classes.spanOrange;
+  let linkColor = classes.linkOrange;
 
   return (
     <div className={classes.taskTitle}>

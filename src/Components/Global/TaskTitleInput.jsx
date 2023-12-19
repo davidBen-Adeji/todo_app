@@ -3,7 +3,7 @@ import { inputChangeHandler } from "../../util/functions";
 import classes from "./TaskTitleInput.module.css";
 
 export default function TaskTitleInput({ title, setTaskTitle, setTaskItem }) {
-  let inputTextColor = classes.inputBlue;
+  let inputTextColor = classes.inputOrange;
 
   return (
     <div className={classes.taskTitleInput}>

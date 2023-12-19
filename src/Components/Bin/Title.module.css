@@ -9,6 +9,10 @@
 .titleBlue {
   color: var(--mariner-900);
 }
+
+.titleOrange {
+  color: var(--web-orange-900);
+}
   
   .titleHeader {
     font-size: 1.5rem;

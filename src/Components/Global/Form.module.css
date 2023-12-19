@@ -23,6 +23,10 @@
   color: var(--mariner-900);
 }
 
+.textOrange {
+  color: var(--web-orange-900);
+}
+
 .inputGroupBtn {
   position: absolute;
   right: 0;
@@ -65,6 +69,21 @@
     to bottom right,
     var(--mariner-500),
     var(--mariner-700)
+  ) !important;
+}
+
+.btnOrange {
+  background: linear-gradient(
+    to bottom right,
+    var(--web-orange-400),
+    var(--web-orange-600)
+  ) !important;
+}
+.btnOrange:hover {
+  background: linear-gradient(
+    to bottom right,
+    var(--web-orange-500),
+    var(--web-orange-700)
   ) !important;
 }
 
