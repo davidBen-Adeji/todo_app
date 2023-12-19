@@ -1,3 +1,76 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  /* jade */
+  --jade-50: #ebfef4;
+  --jade-100: #d0fbe3;
+  --jade-200: #a4f6cc;
+  --jade-300: #6aebb1;
+  --jade-400: #2fd891;
+  --jade-500: #0abf79;
+  --jade-600: #00a86b;
+  --jade-700: #007c52;
+  --jade-800: #036242;
+  --jade-900: #045038;
+  --jade-950: #012d21;
+
+  /* marine */
+  --mariner-50: #f0f8fe;
+  --mariner-100: #deeefb;
+  --mariner-200: #c5e3f8;
+  --mariner-300: #9cd1f4;
+  --mariner-400: #6eb6ec;
+  --mariner-500: #4c9ae5;
+  --mariner-600: #377fd9;
+  --mariner-700: #2d68c4;
+  --mariner-800: #2b56a2;
+  --mariner-900: #284a80;
+  --mariner-950: #1c2f4f;
+}
+
+.text-white {
+  color: white;
+}
+
+.mb-0\.5 {
+  margin-bottom: 0.125rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-80 {
+  opacity: 0.8;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
+    0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
+    0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}

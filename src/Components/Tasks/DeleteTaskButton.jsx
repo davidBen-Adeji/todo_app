@@ -1,10 +1,12 @@
 import BinImg from "../../assets/svg/bin-green.svg";
 
+import classes from "./DeleteTaskButton.module.css";
+
 export default function DeleteTaskButton({ onDeleteTask }) {
   return (
     <button onClick={onDeleteTask} type="submit">
       <img
-        className="w-6 h-6 opacity-95 hover:opacity-100"
+        className={classes.deleteTaskButton}
         src={BinImg}
         alt="bin"
       />

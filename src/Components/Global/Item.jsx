@@ -1,5 +1,7 @@
 import { toggleCheckBoxHandler } from "../../util/functions";
 
+import classes from "./Item.module.css";
+
 export default function Item({
   id,
   index,
@@ -8,20 +10,19 @@ export default function Item({
   setCheckedState,
 }) {
   let clickedLabelClass = "opacity-100";
-  let spanClass = "";
+  let checkboxColor = classes.checkboxGreen;
+  let spanColor = classes.spanGreen;
 
   if (checkedState) {
-    clickedLabelClass = "line-through hover:line-through opacity-50";
-    spanClass =
-      "block w-[70%] h-[70%] bg-gradient-to-br from-jade-200 to-jade-400 rounded-full cursor-pointer";
+    clickedLabelClass = classes.taskItemLabelClicked;
   }
 
   const inputId = `checkbox_${Math.random()}`;
 
   return (
-    <div className="flex items-center gap-5">
+    <div className={classes.taskItemGroup}>
       <input
-        className="absolute opacity-0"
+        className={classes.taskItemInput}
         type="checkbox"
         checked={checkedState}
         onChange={() => toggleCheckBoxHandler(index, setCheckedState, id)}
@@ -29,13 +30,15 @@ export default function Item({
       />{" "}
       <label
         htmlFor={inputId}
-        className="flex justify-center items-center w-5 h-5 transition duration-200 hover:scale-110 focus:scale-110 border-jade-700 border rounded-full cursor-pointer"
+        className={`${classes.taskItemCustomCheckbox} ${checkboxColor} rounded-full`}
       >
-        <span className={`${spanClass}`}></span>
+        <span
+          className={`${checkedState ? classes.taskItemSpan : ""} ${spanColor}`}
+        ></span>
       </label>
       <label
         htmlFor={inputId}
-        className={`capitalize cursor-pointer hover:underline ${clickedLabelClass}`}
+        className={`${classes.taskItemLabel} ${clickedLabelClass}`}
       >
         {item}
       </label>

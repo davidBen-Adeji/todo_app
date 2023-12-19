@@ -1,6 +1,8 @@
 import { addTaskItemHandler, inputChangeHandler } from "../../util/functions";
 import AddImg from "../../assets/svg/add.svg";
 
+import classes from "./Form.module.css";
+
 export default function Form({
   id,
   taskItem,
@@ -9,6 +11,8 @@ export default function Form({
   setTaskItems,
   setTaskTitle,
 }) {
+  let btnColor = classes.btnGreen;
+
   return (
     <form
       action=""
@@ -22,11 +26,11 @@ export default function Form({
           id
         )
       }
-      className="relative w-[65%] shadow-lg rounded-full"
+      className={`${classes.form} shadow-lg rounded-full`}
     >
-      <div className="flex items-end mt-10">
+      <div className={classes.inputGroup}>
         <input
-          className=" bg-white w-[75%] py-2 px-3 capitalize outline-none rounded-full"
+          className={`${classes.inputGroupText} rounded-full`}
           type="text"
           value={taskItem}
           placeholder="Add items here"
@@ -40,10 +44,10 @@ export default function Form({
           }
         />
         <button
-          className="absolute bg-gradient-to-br from-jade-400 to-jade-600 hover:from-jade-500 hover:to-jade-700 h-[100%] w-[25%] lappy:w-[20%] right-0 flex justify-center items-center rounded-full"
+          className={`${classes.inputGroupBtn} ${btnColor} rounded-full`}
           type="submit"
         >
-          <img src={AddImg} className="w-[50%] h-[50%]" alt="add item" />
+          <img src={AddImg} className={classes.inputGroupImg} alt="add item" />
         </button>
       </div>
     </form>

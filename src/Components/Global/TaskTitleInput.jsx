@@ -1,10 +1,14 @@
 import { inputChangeHandler } from "../../util/functions";
 
+import classes from "./TaskTitleInput.module.css";
+
 export default function TaskTitleInput({ title, setTaskTitle, setTaskItem }) {
+  let inputTextColor = classes.inputTextGreen;
+
   return (
-    <div className="mt-4 mb-8">
+    <div className={classes.taskTitleInput}>
       <input
-        className=" bg-white w-[75%] border-b border-jade-500 py-2 shadow-md px-4 capitalize outline-none text-3xl rounded-full"
+        className={`${classes.taskTitleInputText} ${inputTextColor} shadow-md rounded-full`}
         type="text"
         value={title}
         placeholder="Add title here"

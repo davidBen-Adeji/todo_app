@@ -1,0 +1,8 @@
+.deleteTaskButton {
+    opacity: .95;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.deleteTaskButton:hover {
+    opacity: 100;
+}

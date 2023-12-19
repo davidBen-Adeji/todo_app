@@ -1,0 +1,14 @@
+.list {
+    position: relative;
+    margin-top: 2rem;
+    padding: 1.25rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.deleteButton {
+    width: 1.5rem;
+    height: 1.5rem;
+}

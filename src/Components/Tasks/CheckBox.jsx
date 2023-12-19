@@ -1,7 +1,9 @@
+import classes from "./CheckBox.module.css";
+
 export default function CheckBox({ id, isChecked, onToggleCheckBox }) {
   return (
     <input
-      className="absolute opacity-0 top-12"
+      className={classes.checkbox}
       type="checkbox"
       id={id}
       checked={isChecked}

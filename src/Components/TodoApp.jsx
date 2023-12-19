@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { INITIAL_TASKS } from "../util/INITIAL_TASKS";
 import Header from "./Header/Header.jsx";
-import Main from "./Main.jsx";
+import Main from "./Main/Main.jsx";
 
 export default function TodoApp() {
   const [tasks, setTasks] = useState(

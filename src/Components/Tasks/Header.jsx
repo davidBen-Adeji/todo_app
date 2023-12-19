@@ -1,10 +1,12 @@
 import TaskImg from "../../assets/svg/task.svg";
 
+import classes from "./Header.module.css";
+
 export default function Header() {
   return (
-    <div className="flex items-center mt-5 mb-8 gap-2">
-      <img className="w-18 h-18" src={TaskImg} alt="task" />
-      <h1 className="text-3xl">Tasks</h1>
+    <div className={classes.header}>
+      <img src={TaskImg} alt="task" />
+      <h1 className={classes.headerText}>Tasks</h1>
     </div>
   );
 }

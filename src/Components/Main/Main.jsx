@@ -1,4 +1,5 @@
-import RoutesComponent from "./RoutesComponent.jsx";
+import RoutesComponent from "../RoutesComponent.jsx";
+import classes from "./Main.module.css";
 
 export default function Main({
   task,
@@ -13,8 +14,10 @@ export default function Main({
   onDeletePermanently,
   onToggleCheckBox,
 }) {
+  let bgColor = classes.bgWhite;
+
   return (
-    <main className="bg-white px-7 pb-1 overflow-y-scroll">
+    <main className={`${classes.main} ${bgColor}`}>
       <RoutesComponent
         task={task}
         tasks={tasks}

@@ -3,7 +3,11 @@ import BlackBinImg from "../../assets/svg/bin.svg";
 import Title from "./Title";
 import BinItems from "./BinItems";
 
+import classes from "./Bin.module.css";
+
 export default function Bin({ bin, onDeletePermanently, onRestoreTask }) {
+  let btnColor = classes.btnGreen;
+  
   function onDeleteAll() {
     for (const b of bin) {
       onDeletePermanently(b);
@@ -14,7 +18,7 @@ export default function Bin({ bin, onDeletePermanently, onRestoreTask }) {
     <img
       src={BlackBinImg}
       alt="bin image"
-      className="opacity-50 w-1/2 h-1/2 mx-auto mt-28"
+      className={classes.blackBinImg}
     />
   );
 
@@ -33,11 +37,11 @@ export default function Bin({ bin, onDeletePermanently, onRestoreTask }) {
       <Title />
       {binItemsComponent}
       <button
-        className="absolute bg-gradient-to-br from-jade-400 to-jade-600 hover:from-jade-500 hover:to-jade-700 right-10 lappy:right-16 bottom-14 lappy:bottom-7 flex justify-center items-center w-14 h-14 rounded-full text-5xl"
+        className={`${classes.deleteButton} ${btnColor}`}
         type="button"
         onClick={onDeleteAll}
       >
-        <img src={BinImg} className="w-[65%] h-[65%]" alt="bin" />
+        <img src={BinImg} className={classes.binImg} alt="bin" />
       </button>
     </>
   );

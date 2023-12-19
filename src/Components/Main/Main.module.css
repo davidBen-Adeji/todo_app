@@ -1,0 +1,8 @@
+.main {
+    padding: 0 1.75rem 0.25rem;
+    overflow-y: scroll;
+}
+
+.bgWhite {
+    background-color: white;
+}

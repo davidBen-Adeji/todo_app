@@ -3,6 +3,8 @@ import Task from "./Task.jsx";
 import Header from "./Header.jsx";
 import NewTaskButton from "./NewTaskButton.jsx";
 
+import classes from "./Tasks.module.css";
+
 export default function Tasks({
   tasks,
   checkedState,
@@ -14,7 +16,7 @@ export default function Tasks({
     <img
       src={TaskImg}
       alt="task image"
-      className="opacity-50 w-1/2 h-1/2 m-auto mt-28"
+      className={classes.taskImg}
     />
   );
 

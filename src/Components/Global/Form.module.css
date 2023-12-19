@@ -1,0 +1,56 @@
+.form {
+  position: relative;
+  width: 65%;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 2.5rem;
+}
+
+.inputGroupText {
+  background-color: white;
+  width: 75%;
+  text-transform: capitalize;
+  padding: 0.5rem 0.75rem;
+  /* outline: 0; */
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.inputGroupBtn {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 56.31125rem) {
+  .inputGroupBtn {
+    width: 20%;
+  }
+}
+
+.btnGreen {
+  background: linear-gradient(
+    to bottom right,
+    var(--jade-400),
+    var(--jade-600)
+  ) !important;
+}
+.btnGreen:hover {
+  background: linear-gradient(
+    to bottom right,
+    var(--jade-500),
+    var(--jade-700)
+  ) !important;
+}
+
+.inputGroupImg {
+    width: 50%;
+    height: 50%;
+}
+

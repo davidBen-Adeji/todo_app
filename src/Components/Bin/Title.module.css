@@ -1,0 +1,14 @@
+.title {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .titleHeader {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: 0.25rem;
+  }
+  

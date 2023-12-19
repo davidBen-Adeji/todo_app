@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.headerText {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}

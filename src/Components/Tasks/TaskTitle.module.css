@@ -1,0 +1,54 @@
+.taskTitle {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.taskTitleCheckbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+  transition: all linear 200ms;
+}
+.taskTitleCheckbox:hover {
+  transform: scale(105%);
+}
+
+.checkboxGreen {
+  border: 1px solid var(--jade-700);
+}
+
+.taskTitleSpan {
+  display: block;
+  width: 70%;
+  height: 70%;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+.spanGreen {
+  background: linear-gradient(
+    to bottom right,
+    var(--jade-200),
+    var(--jade-400)
+  );
+}
+
+.taskTitleLink {
+  text-transform: capitalize;
+}
+.taskTitleLink:hover {
+  text-decoration: underline;
+}
+
+.taskTitleLinkClicked {
+  opacity: 0.5;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+.taskTitleLinkClicked:hover {
+  text-decoration: line-through;
+}
