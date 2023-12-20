@@ -8,10 +8,31 @@ export default function TaskTitle({
   path,
   onChangeIndex,
   children,
+  themeColor,
 }) {
-  let checkboxColor = "checkboxRed";
-  let spanColor = "spanRed";
-  let linkColor = "textRed";
+  let checkboxColor = "checkboxGreen";
+  let spanColor = "spanGreen";
+  let linkColor = "";
+
+  switch (themeColor) {
+    case "blue":
+      checkboxColor = "checkboxBlue";
+      spanColor = "spanBlue";
+      linkColor = "textBlue";
+      break;
+
+    case "orange":
+      checkboxColor = "checkboxOrange";
+      spanColor = "spanOrange";
+      linkColor = "textOrange";
+      break;
+
+    case "red":
+      checkboxColor = "checkboxRed";
+      spanColor = "spanRed";
+      linkColor = "textRed";
+      break;
+  }
 
   return (
     <div className={`itemGroup`}>
@@ -24,7 +45,9 @@ export default function TaskTitle({
       <Link
         to={path}
         onClick={onChangeIndex}
-        className={`${classes.link} ${linkColor} ${isChecked ? classes.taskTitleLinkClicked : ""}`}
+        className={`${classes.link} ${linkColor} ${
+          isChecked ? classes.taskTitleLinkClicked : ""
+        }`}
       >
         {children}
       </Link>

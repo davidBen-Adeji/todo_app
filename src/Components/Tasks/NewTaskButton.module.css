@@ -15,34 +15,6 @@
     }
 }
 
-.btnGreen {
-    background: linear-gradient(to bottom right, var(--jade-400), var(--jade-600));
-}
-.btnGreen:hover {
-    background: linear-gradient(to bottom right, var(--jade-500), var(--jade-700));
-}
-
-.btnBlue {
-    background: linear-gradient(to bottom right, var(--mariner-400), var(--mariner-600));
-}
-.btnBlue:hover {
-    background: linear-gradient(to bottom right, var(--mariner-500), var(--mariner-700));
-}
-
-.btnOrange {
-    background: linear-gradient(to bottom right, var(--web-orange-400), var(--web-orange-600));
-}
-.btnOrange:hover {
-    background: linear-gradient(to bottom right, var(--web-orange-500), var(--web-orange-700));
-}
-
-.btnRed {
-    background: linear-gradient(to bottom right, var(--crimson-300), var(--crimson-500));
-}
-.btnRed:hover {
-    background: linear-gradient(to bottom right, var(--crimson-400), var(--crimson-600));
-}
-
 .addImg {
     width: 65%;
     height: 65%;

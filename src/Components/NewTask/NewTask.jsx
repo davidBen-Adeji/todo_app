@@ -4,7 +4,7 @@ import TaskItems from "../Global/TaskItems.jsx";
 import Form from "../Global/Form.jsx";
 import Buttons from "./Buttons.jsx";
 
-export default function NewTask({ onAddTask }) {
+export default function NewTask({ onAddTask, themeColor }) {
   const [taskTitle, setTaskTitle] = useState("");
   const [taskItem, setTaskItem] = useState("");
   const [taskItems, setTaskItems] = useState([]);
@@ -28,6 +28,7 @@ export default function NewTask({ onAddTask }) {
         title={taskTitle}
         setTaskTitle={setTaskTitle}
         setTaskItem={setTaskItem}
+        themeColor={themeColor}
       />
       <TaskItems
         id={task.id}
@@ -35,6 +36,7 @@ export default function NewTask({ onAddTask }) {
         checkedState={checkedState}
         setCheckedState={setCheckedState}
         setTaskItems={setTaskItems}
+        themeColor={themeColor}
       />
 
       <Form
@@ -44,9 +46,10 @@ export default function NewTask({ onAddTask }) {
         setTaskItem={setTaskItem}
         setTaskItems={setTaskItems}
         setTaskTitle={setTaskTitle}
+        themeColor={themeColor}
       />
 
-      <Buttons onAddTask={() => onAddTask(task)} />
+      <Buttons onAddTask={() => onAddTask(task)} themeColor={themeColor} />
     </>
   );
 }

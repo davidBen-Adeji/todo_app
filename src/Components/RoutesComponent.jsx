@@ -16,6 +16,7 @@ export default function RoutesComponent({
   onRestoreTask,
   onDeletePermanently,
   onToggleCheckBox,
+  themeColor,
 }) {
   return (
     <Routes>
@@ -28,13 +29,23 @@ export default function RoutesComponent({
             onChangeIndex={onChangeIndex}
             onDeleteTask={onDeleteTask}
             onToggleCheckBox={onToggleCheckBox}
+            themeColor={themeColor}
           />
         }
       />
-      <Route path="/newTask" element={<NewTask onAddTask={onAddTask} />} />
+      <Route
+        path="/newTask"
+        element={<NewTask onAddTask={onAddTask} themeColor={themeColor} />}
+      />
       <Route
         path="/task"
-        element={<ViewedTask task={task} onUpdateTask={onUpdateTask} />}
+        element={
+          <ViewedTask
+            task={task}
+            onUpdateTask={onUpdateTask}
+            themeColor={themeColor}
+          />
+        }
       />
       <Route
         path="/bin"
@@ -43,6 +54,7 @@ export default function RoutesComponent({
             bin={bin}
             onDeletePermanently={onDeletePermanently}
             onRestoreTask={onRestoreTask}
+            themeColor={themeColor}
           />
         }
       />

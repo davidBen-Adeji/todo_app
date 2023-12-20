@@ -10,9 +10,27 @@ export default function Form({
   setTaskItem,
   setTaskItems,
   setTaskTitle,
+  themeColor,
 }) {
-  let btnColor = "btnRed";
-  let textColor = "textRed";
+  let btnColor = "btnGreen";
+  let textColor = "";
+
+  switch (themeColor) {
+    case "blue":
+      textColor = "textBlue";
+      btnColor = "btnBlue";
+      break;
+
+    case "orange":
+      textColor = "textOrange";
+      btnColor = "btnOrange";
+      break;
+
+    case "red":
+      textColor = "textRed";
+      btnColor = "btnRed";
+      break;
+  }
 
   return (
     <form

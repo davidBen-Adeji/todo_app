@@ -15,10 +15,18 @@ export default function TodoApp() {
     JSON.parse(localStorage.getItem("index")) || 0
   );
   const [bin, setBin] = useState(JSON.parse(localStorage.getItem("bin")) || []);
+  const [themeColor, setThemeColor] = useState(
+    localStorage.getItem("themeColor") || "green"
+  );
 
   let undoneTasksLength = 0;
   for (const state of checkedState) {
     if (!state) undoneTasksLength++;
+  }
+
+  function handleThemeColorChange(color) {
+    localStorage.setItem("themeColor", color);
+    setThemeColor(color);
   }
 
   function toggleCheckBoxHandler(index) {
@@ -114,7 +122,12 @@ export default function TodoApp() {
 
   return (
     <>
-      <Header undoneTasksLength={undoneTasksLength} binLength={bin.length} />
+      <Header
+        undoneTasksLength={undoneTasksLength}
+        binLength={bin.length}
+        themeColor={themeColor}
+        onChangeThemeColor={handleThemeColorChange}
+      />
       <Main
         task={tasks[index]}
         tasks={tasks}
@@ -127,6 +140,7 @@ export default function TodoApp() {
         onRestoreTask={restoreTaskHandler}
         onDeletePermanently={permanentDeleteHandler}
         onToggleCheckBox={toggleCheckBoxHandler}
+        themeColor={themeColor}
       />
     </>
   );

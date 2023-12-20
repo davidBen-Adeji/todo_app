@@ -13,8 +13,23 @@ export default function Main({
   onRestoreTask,
   onDeletePermanently,
   onToggleCheckBox,
+  themeColor,
 }) {
-  let bgColor = classes.bgRed;
+  let bgColor = classes.bgWhite;
+
+  switch (themeColor) {
+    case "blue":
+      bgColor = classes.bgBlue;
+      break;
+
+    case "orange":
+      bgColor = classes.bgOrange;
+      break;
+
+    case "red":
+      bgColor = classes.bgRed;
+      break;
+  }
 
   return (
     <main className={`${classes.main} ${bgColor}`}>
@@ -30,6 +45,7 @@ export default function Main({
         onRestoreTask={onRestoreTask}
         onDeletePermanently={onDeletePermanently}
         onToggleCheckBox={onToggleCheckBox}
+        themeColor={themeColor}
       />
     </main>
   );

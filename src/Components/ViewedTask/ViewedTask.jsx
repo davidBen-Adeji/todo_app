@@ -4,7 +4,7 @@ import TaskItems from "../Global/TaskItems";
 import Form from "../Global/Form";
 import DoneButton from "./DoneButton";
 
-export default function ViewedTask({ task, onUpdateTask }) {
+export default function ViewedTask({ task, onUpdateTask, themeColor }) {
   const [taskTitle, setTaskTitle] = useState(task.taskTitle);
   const [taskItems, setTaskItems] = useState(
     JSON.parse(localStorage.getItem(`${task.id}_items`)) || task.taskItems
@@ -26,6 +26,7 @@ export default function ViewedTask({ task, onUpdateTask }) {
         title={taskTitle}
         setTaskTitle={setTaskTitle}
         setTaskItem={setTaskItem}
+        themeColor={themeColor}
       />
       <TaskItems
         id={task.id}
@@ -33,6 +34,7 @@ export default function ViewedTask({ task, onUpdateTask }) {
         checkedState={checkedState}
         setCheckedState={setCheckedState}
         setTaskItems={setTaskItems}
+        themeColor={themeColor}
       />
       <Form
         id={task.id}
@@ -41,8 +43,9 @@ export default function ViewedTask({ task, onUpdateTask }) {
         setTaskItem={setTaskItem}
         setTaskItems={setTaskItems}
         setTaskTitle={setTaskTitle}
+        themeColor={themeColor}
       />
-      <DoneButton onUpdateTask={() => onUpdateTask(updatedTask)} />
+      <DoneButton onUpdateTask={() => onUpdateTask(updatedTask)} themeColor={themeColor} />
     </>
   );
 }

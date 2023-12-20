@@ -5,6 +5,7 @@ export default function TaskItems({
   checkedState,
   setCheckedState,
   setTaskItems,
+  themeColor,
 }) {
   return (
     <>
@@ -17,6 +18,7 @@ export default function TaskItems({
           checkedState={checkedState[index]}
           setCheckedState={setCheckedState}
           setTaskItems={setTaskItems}
+          themeColor={themeColor}
         />
       ))}
     </>

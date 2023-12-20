@@ -8,10 +8,31 @@ export default function Item({
   item,
   checkedState,
   setCheckedState,
+  themeColor,
 }) {
-  let checkboxColor = "checkboxRed";
-  let spanColor = "spanRed";
-  let labelColor = "textRed";
+  let checkboxColor = "checkboxGreen";
+  let spanColor = "spanGreen";
+  let labelColor = "";
+
+  switch (themeColor) {
+    case "blue":
+      checkboxColor = "checkboxBlue";
+      spanColor = "spanBlue";
+      labelColor = "textBlue";
+      break;
+
+    case "orange":
+      checkboxColor = "checkboxOrange";
+      spanColor = "spanOrange";
+      labelColor = "textOrange";
+      break;
+
+    case "red":
+      checkboxColor = "checkboxRed";
+      spanColor = "spanRed";
+      labelColor = "textRed";
+      break;
+  }
 
   const inputId = `checkbox_${Math.random()}`;
 
@@ -28,13 +49,13 @@ export default function Item({
         htmlFor={inputId}
         className={`checkbox ${checkboxColor} rounded-full`}
       >
-        <span
-          className={`${checkedState ? "span" : ""} ${spanColor}`}
-        ></span>
+        <span className={`${checkedState ? "span" : ""} ${spanColor}`}></span>
       </label>
       <label
         htmlFor={inputId}
-        className={`${classes.itemText} ${labelColor} ${checkedState ? classes.itemClicked : "opacity-100"}`}
+        className={`${classes.itemText} ${labelColor} ${
+          checkedState ? classes.itemClicked : "opacity-100"
+        }`}
       >
         {item}
       </label>

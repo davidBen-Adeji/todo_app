@@ -9,6 +9,7 @@ export default function Task({
   onToggleCheckBox,
   onChangeIndex,
   onDeleteTask,
+  themeColor,
 }) {
   const path = isChecked ? "" : to;
   const inputId = `checkbox_${Math.random()}`;
@@ -25,10 +26,11 @@ export default function Task({
         inputId={inputId}
         path={path}
         onChangeIndex={onChangeIndex}
+        themeColor={themeColor}
       >
         {children}
       </TaskTitle>
-      <DeleteTaskButton onDeleteTask={onDeleteTask} />
+      <DeleteTaskButton onDeleteTask={onDeleteTask} themeColor={themeColor} />
     </li>
   );
 }

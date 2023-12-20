@@ -1,6 +1,11 @@
 import BinItem from "./BinItem.jsx";
 
-export default function BinItems({ bin, onRestoreTask, onDeletePermanently }) {
+export default function BinItems({
+  bin,
+  onRestoreTask,
+  onDeletePermanently,
+  themeColor,
+}) {
   return (
     <ul>
       {bin &&
@@ -10,6 +15,7 @@ export default function BinItems({ bin, onRestoreTask, onDeletePermanently }) {
             title={binItem.taskTitle}
             onRestoreTask={() => onRestoreTask(binItem, index)}
             onDeletePermanently={() => onDeletePermanently(binItem)}
+            themeColor={themeColor}
           />
         ))}
     </ul>

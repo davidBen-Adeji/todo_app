@@ -6,20 +6,34 @@ import { removeNewId } from "../../util/functions";
 
 import classes from "./Buttons.module.css";
 
-export default function Buttons({ onAddTask }) {
-  let bgColor = "btnRed";
+export default function Buttons({ onAddTask, themeColor }) {
+  let btnColor = "btnGreen";
+
+  switch (themeColor) {
+    case "blue":
+      btnColor = "btnBlue";
+      break;
+
+    case "orange":
+      btnColor = "btnOrange";
+      break;
+
+    case "red":
+      btnColor = "btnRed";
+      break;
+  }
   
   return (
     <div className={classes.buttons}>
       <Link
         to="/"
-        className={`${bgColor} ${classes.button} ${classes.cancel} rounded-full`}
+        className={`${btnColor} ${classes.button} ${classes.cancel} rounded-full`}
         onClick={removeNewId}
       >
         <img src={CancelImg} alt="cancel" />
       </Link>
       <Link
-        className={`${bgColor} ${classes.button} ${classes.done} rounded-full`}
+        className={`${btnColor} ${classes.button} ${classes.done} rounded-full`}
         to="/"
         onClick={onAddTask}
       >
