@@ -4,7 +4,7 @@ import AddImg from "../../assets/svg/add.svg";
 import classes from "./NewTaskButton.module.css";
 
 export default function NewTaskButton() {
-  let btnColor = classes.btnOrange;
+  let btnColor = classes.btnRed;
   return (
     <Link
       className={`${classes.newTaskButton} ${btnColor} rounded-full`}

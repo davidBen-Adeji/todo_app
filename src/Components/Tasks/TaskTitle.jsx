@@ -9,22 +9,22 @@ export default function TaskTitle({
   onChangeIndex,
   children,
 }) {
-  let checkboxColor = classes.checkboxOrange;
-  let spanColor = classes.spanOrange;
-  let linkColor = classes.linkOrange;
+  let checkboxColor = "checkboxRed";
+  let spanColor = "spanRed";
+  let linkColor = "textRed";
 
   return (
-    <div className={classes.taskTitle}>
+    <div className={`itemGroup`}>
       <label
         htmlFor={inputId}
-        className={`${classes.taskTitleCheckbox} ${checkboxColor} rounded-full`}
+        className={`checkbox ${checkboxColor} rounded-full`}
       >
-        <span className={`${isChecked ? classes.taskTitleSpan : ""} ${spanColor}`}></span>
+        <span className={`${isChecked ? "span" : ""} ${spanColor}`}></span>
       </label>
       <Link
         to={path}
         onClick={onChangeIndex}
-        className={`${classes.taskTitleLink} ${linkColor} ${isChecked ? classes.taskTitleLinkClicked : ""}`}
+        className={`${classes.link} ${linkColor} ${isChecked ? classes.taskTitleLinkClicked : ""}`}
       >
         {children}
       </Link>

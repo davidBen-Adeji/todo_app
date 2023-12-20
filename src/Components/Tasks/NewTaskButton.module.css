@@ -36,6 +36,13 @@
     background: linear-gradient(to bottom right, var(--web-orange-500), var(--web-orange-700));
 }
 
+.btnRed {
+    background: linear-gradient(to bottom right, var(--crimson-300), var(--crimson-500));
+}
+.btnRed:hover {
+    background: linear-gradient(to bottom right, var(--crimson-400), var(--crimson-600));
+}
+
 .addImg {
     width: 65%;
     height: 65%;

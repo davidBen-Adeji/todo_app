@@ -38,6 +38,14 @@
   );
 }
 
+.headerRed {
+  background: linear-gradient(
+    to bottom right,
+    var(--crimson-300),
+    var(--crimson-800)
+  );
+}
+
 .headerLengths {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -61,6 +69,10 @@
 
 .lengthOrange {
   color: var(--web-orange-600);
+}
+
+.lengthRed {
+  color: var(--crimson-600);
 }
 
 .taskImg {

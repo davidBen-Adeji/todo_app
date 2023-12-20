@@ -19,14 +19,6 @@
   outline-offset: 2px;
 }
 
-.textBlue {
-  color: var(--mariner-900);
-}
-
-.textOrange {
-  color: var(--web-orange-900);
-}
-
 .inputGroupBtn {
   position: absolute;
   right: 0;
@@ -40,51 +32,6 @@
   .inputGroupBtn {
     width: 20%;
   }
-}
-
-.btnGreen {
-  background: linear-gradient(
-    to bottom right,
-    var(--jade-400),
-    var(--jade-600)
-  ) !important;
-}
-.btnGreen:hover {
-  background: linear-gradient(
-    to bottom right,
-    var(--jade-500),
-    var(--jade-700)
-  ) !important;
-}
-
-.btnBlue {
-  background: linear-gradient(
-    to bottom right,
-    var(--mariner-400),
-    var(--mariner-600)
-  ) !important;
-}
-.btnBlue:hover {
-  background: linear-gradient(
-    to bottom right,
-    var(--mariner-500),
-    var(--mariner-700)
-  ) !important;
-}
-
-.btnOrange {
-  background: linear-gradient(
-    to bottom right,
-    var(--web-orange-400),
-    var(--web-orange-600)
-  ) !important;
-}
-.btnOrange:hover {
-  background: linear-gradient(
-    to bottom right,
-    var(--web-orange-500),
-    var(--web-orange-700)
-  ) !important;
 }
 
 .inputGroupImg {

@@ -27,3 +27,8 @@
     color: var(--web-orange-900);
     border-bottom: 1px solid var(--web-orange-500);
 }
+
+.inputRed {
+    color: var(--crimson-900);
+    border-bottom: 1px solid var(--crimson-400);
+}

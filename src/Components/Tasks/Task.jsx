@@ -2,8 +2,6 @@ import CheckBox from "./CheckBox.jsx";
 import DeleteTaskButton from "./DeleteTaskButton.jsx";
 import TaskTitle from "./TaskTitle";
 
-import classes from "./Task.module.css";
-
 export default function Task({
   to,
   children,
@@ -16,7 +14,7 @@ export default function Task({
   const inputId = `checkbox_${Math.random()}`;
 
   return (
-    <li className={`${classes.task} shadow-lg rounded-full`}>
+    <li className={`list shadow-lg rounded-full`}>
       <CheckBox
         id={inputId}
         isChecked={isChecked}

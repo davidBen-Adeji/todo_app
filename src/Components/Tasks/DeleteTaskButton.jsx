@@ -1,6 +1,7 @@
 // import BinImg from "../../assets/svg/bin-green.svg";
 // import BinImgBlue from "../../assets/svg/bin-blue.svg";
-import BinImgOrange from "../../assets/svg/bin-orange.svg";
+// import BinImgOrange from "../../assets/svg/bin-orange.svg";
+import BinImgRed from "../../assets/svg/bin-red.svg";
 
 import classes from "./DeleteTaskButton.module.css";
 
@@ -9,7 +10,7 @@ export default function DeleteTaskButton({ onDeleteTask }) {
     <button onClick={onDeleteTask} type="submit">
       <img
         className={classes.deleteTaskButton}
-        src={BinImgOrange}
+        src={BinImgRed}
         alt="bin"
       />
     </button>

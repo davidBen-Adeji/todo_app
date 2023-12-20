@@ -9,21 +9,16 @@ export default function Item({
   checkedState,
   setCheckedState,
 }) {
-  let clickedLabelClass = "opacity-100";
-  let checkboxColor = classes.checkboxOrange;
-  let spanColor = classes.spanOrange;
-  let labelColor = classes.labelOrange;
-
-  if (checkedState) {
-    clickedLabelClass = classes.taskItemLabelClicked;
-  }
+  let checkboxColor = "checkboxRed";
+  let spanColor = "spanRed";
+  let labelColor = "textRed";
 
   const inputId = `checkbox_${Math.random()}`;
 
   return (
-    <div className={classes.taskItemGroup}>
+    <div className={`itemGroup`}>
       <input
-        className={classes.taskItemInput}
+        className={`checkbox-0`}
         type="checkbox"
         checked={checkedState}
         onChange={() => toggleCheckBoxHandler(index, setCheckedState, id)}
@@ -31,15 +26,15 @@ export default function Item({
       />{" "}
       <label
         htmlFor={inputId}
-        className={`${classes.taskItemCustomCheckbox} ${checkboxColor} rounded-full`}
+        className={`checkbox ${checkboxColor} rounded-full`}
       >
         <span
-          className={`${checkedState ? classes.taskItemSpan : ""} ${spanColor}`}
+          className={`${checkedState ? "span" : ""} ${spanColor}`}
         ></span>
       </label>
       <label
         htmlFor={inputId}
-        className={`${classes.taskItemLabel} ${labelColor} ${clickedLabelClass}`}
+        className={`${classes.itemText} ${labelColor} ${checkedState ? classes.itemClicked : "opacity-100"}`}
       >
         {item}
       </label>

@@ -8,8 +8,8 @@ export default function Header({ undoneTasksLength, binLength }) {
   let tasksOpacityClass = "opacity-0";
   let binOpacityClass = "opacity-0";
 
-  let bgColor = classes.headerOrange;
-  let lengthColor = classes.lengthOrange;
+  let bgColor = classes.headerRed;
+  let lengthColor = classes.lengthRed;
 
   if (undoneTasksLength > 0) {
     tasksOpacityClass = "opacity-100";

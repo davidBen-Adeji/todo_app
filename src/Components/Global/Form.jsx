@@ -11,8 +11,8 @@ export default function Form({
   setTaskItems,
   setTaskTitle,
 }) {
-  let btnColor = classes.btnOrange;
-  let textColor = classes.textOrange;
+  let btnColor = "btnRed";
+  let textColor = "textRed";
 
   return (
     <form

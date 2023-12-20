@@ -1,9 +1,7 @@
-import classes from "./CheckBox.module.css";
-
 export default function CheckBox({ id, isChecked, onToggleCheckBox }) {
   return (
     <input
-      className={classes.checkbox}
+      className={`checkbox-0`}
       type="checkbox"
       id={id}
       checked={isChecked}

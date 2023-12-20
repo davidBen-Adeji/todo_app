@@ -10,54 +10,29 @@
   gap: 1rem;
 }
 @media (min-width: 56.31125rem) {
-    .buttons {
-      right: 4rem;
-      bottom: 1.75rem;
-    }
-  }  
-
-.bgGreen{
-    background: linear-gradient(to bottom right, var(--jade-400), var(--jade-600));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.bgGreen:hover, .bgGreen:focus {
-    background: linear-gradient(to bottom right, var(--jade-500), var(--jade-700));
+  .buttons {
+    right: 4rem;
+    bottom: 1.75rem;
+  }
 }
 
-.bgBlue{
-    background: linear-gradient(to bottom right, var(--mariner-400), var(--mariner-600));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.bgBlue:hover, .bgBlue:focus {
-    background: linear-gradient(to bottom right, var(--mariner-500), var(--mariner-700));
-}
-
-.bgOrange{
-    background: linear-gradient(to bottom right, var(--web-orange-400), var(--web-orange-600));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.bgOrange:hover, .bgBlue:focus {
-    background: linear-gradient(to bottom right, var(--web-orange-500), var(--web-orange-700));
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cancel {
-    width: 1.75rem;
-    height: 1.75rem;
+  width: 1.75rem;
+  height: 1.75rem;
 }
 
 .done {
-    width: 3rem;
-    height: 3rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .doneImg {
-    width: 2.25rem;
-    height: 2.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
 }
-

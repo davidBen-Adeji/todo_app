@@ -1,14 +1,3 @@
-.binItem {
-    position: relative;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1.25rem 2.5rem;
-    border-radius: 9999px;
-  }
-  
   .binItemLink {
     text-transform: capitalize;
     opacity: 0.5;

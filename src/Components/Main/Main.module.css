@@ -14,3 +14,7 @@
 .bgOrange {
     background-color: var(--web-orange-50);
 }
+
+.bgRed {
+    background-color: var(--crimson-50);
+}

@@ -1,79 +1,8 @@
-.taskTitle {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-
-.taskTitleCheckbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1.25rem;
-  height: 1.25rem;
-  cursor: pointer;
-  transition: all linear 200ms;
-}
-.taskTitleCheckbox:hover {
-  transform: scale(105%);
-}
-
-.checkboxGreen {
-  border: 1px solid var(--jade-700);
-}
-
-.checkboxBlue {
-  border: 1px solid var(--mariner-600);
-}
-
-.checkboxOrange {
-  border: 1px solid var(--web-orange-700);
-}
-
-.taskTitleSpan {
-  display: block;
-  width: 70%;
-  height: 70%;
-  border-radius: 9999px;
-  cursor: pointer;
-}
-
-.spanGreen {
-  background: linear-gradient(
-    to bottom right,
-    var(--jade-200),
-    var(--jade-400)
-  );
-}
-
-.spanBlue {
-  background: linear-gradient(
-    to bottom right,
-    var(--mariner-400),
-    var(--mariner-600)
-  );
-}
-
-.spanOrange {
-  background: linear-gradient(
-    to bottom right,
-    var(--web-orange-500),
-    var(--web-orange-700)
-  );
-}
-
-.taskTitleLink {
+.link {
   text-transform: capitalize;
 }
-.taskTitleLink:hover {
+.link:hover {
   text-decoration: underline;
-}
-
-.linkBlue {
-  color: var(--mariner-900);
-}
-
-.linkOrange {
-  color: var(--web-orange-900);
 }
 
 .taskTitleLinkClicked {

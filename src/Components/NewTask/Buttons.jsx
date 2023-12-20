@@ -7,19 +7,19 @@ import { removeNewId } from "../../util/functions";
 import classes from "./Buttons.module.css";
 
 export default function Buttons({ onAddTask }) {
-  let bgColor = classes.bgOrange;
+  let bgColor = "btnRed";
   
   return (
     <div className={classes.buttons}>
       <Link
         to="/"
-        className={`${bgColor} ${classes.cancel} rounded-full`}
+        className={`${bgColor} ${classes.button} ${classes.cancel} rounded-full`}
         onClick={removeNewId}
       >
         <img src={CancelImg} alt="cancel" />
       </Link>
       <Link
-        className={`${bgColor} ${classes.done} rounded-full`}
+        className={`${bgColor} ${classes.button} ${classes.done} rounded-full`}
         to="/"
         onClick={onAddTask}
       >

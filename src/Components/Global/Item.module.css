@@ -1,93 +1,16 @@
-.taskItemGroup {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-
-.taskItemInput {
-  position: absolute;
-  opacity: 0;
-}
-
-.taskItemCustomCheckbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1.25rem;
-  height: 1.25rem;
-  cursor: pointer;
-  transition: all linear 200ms;
-}
-
-.checkboxGreen {
-  border: 1px solid var(--jade-700);
-}
-
-.checkboxBlue {
-  border: 1px solid var(--mariner-600);
-}
-
-.checkboxOrange {
-  border: 1px solid var(--web-orange-700);
-}
-
-.taskItemCustomCheckbox:hover,
-.taskItemCustomCheckbox:focus {
-  transform: scale(105%);
-}
-
-.taskItemSpan {
-  display: block;
-  width: 70%;
-  height: 70%;
-  border-radius: 9999px;
-  cursor: pointer;
-}
-
-.spanGreen {
-  background: linear-gradient(
-    to bottom right,
-    var(--jade-200),
-    var(--jade-400)
-  );
-}
-
-.spanBlue {
-  background: linear-gradient(
-    to bottom right,
-    var(--mariner-400),
-    var(--mariner-600)
-  );
-}
-
-.spanOrange {
-  background: linear-gradient(
-    to bottom right,
-    var(--web-orange-500),
-    var(--web-orange-700)
-  );
-}
-
-.taskItemLabel {
+.itemText {
   text-transform: capitalize;
   cursor: pointer;
 }
-.taskItemLabel:hover {
+.itemText:hover {
   text-decoration: underline;
 }
 
-.taskItemLabelClicked {
-  text-decoration: line-through;
-  opacity: 50;
-}
-.taskItemLabelClicked:hover {
-  text-decoration: line-through;
-}
 
-.labelBlue {
-  color: var(--mariner-900);
+.itemClicked {
+  text-decoration: line-through;
+  opacity: .5;
 }
-
-.labelOrange {
-  color: var(--web-orange-900);
+.itemClicked:hover {
+  text-decoration: line-through;
 }
