@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     gap: 0.25rem;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .link:hover, .customLink:focus {

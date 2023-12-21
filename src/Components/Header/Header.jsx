@@ -51,18 +51,21 @@ export default function Header({
       <div className={classes.nav}>
         <CustomLink to="/">
           <img className={classes.taskImg} src={TaskImg} alt="tasks" />
-          <p className="text-white mb-0.5">Tasks</p>
+          {/* mb-0.5 */}
+          <p className="text-white mb-0.64">Tasks</p>
+          {/* mb-1 */}
           <p
-            className={`mb-1 ${classes.headerLengths} ${lengthColor} ${tasksOpacityClass}`}
+            className={`${classes.headerLengths} ${lengthColor} ${tasksOpacityClass}`}
           >
             {undoneTasksLength}
           </p>
         </CustomLink>
         <CustomLink to="/bin">
           <img className={classes.binImg} src={BinImg} alt="bin" />
-          <p className="text-white">Bin</p>
+          <p className="text-white mb-0.64">Bin</p>
+          {/* mb-0.5 */}
           <p
-            className={`mb-0.5 ${classes.headerLengths} ${lengthColor} ${binOpacityClass}`}
+            className={`${classes.headerLengths} ${lengthColor} ${binOpacityClass}`}
           >
             {binLength}
           </p>
