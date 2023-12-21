@@ -26,7 +26,6 @@ export default function Task({
         inputId={inputId}
         path={path}
         onChangeIndex={onChangeIndex}
-        themeColor={themeColor}
       >
         {children}
       </TaskTitle>

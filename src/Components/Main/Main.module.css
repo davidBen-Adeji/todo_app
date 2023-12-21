@@ -2,19 +2,3 @@
     padding: 0 1.75rem 0.25rem;
     overflow-y: scroll;
 }
-
-.bgWhite {
-    background-color: white;
-}
-
-.bgBlue {
-    background-color: var(--mariner-50);
-}
-
-.bgOrange {
-    background-color: var(--web-orange-50);
-}
-
-.bgRed {
-    background-color: var(--crimson-50);
-}

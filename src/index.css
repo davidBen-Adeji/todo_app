@@ -52,38 +52,8 @@
   --crimson-950: #4f0217;
 }
 
-
-
-.text-white {
-  color: white;
-}
-
-.textBlue {
-  color: var(--mariner-900);
-}
-
-.textOrange {
-  color: var(--web-orange-900);
-}
-
-.textRed {
-  color: var(--crimson-900);
-}
-
-/* .m-0 {
-  margin: 0;
-} */
-
 .mb-0\.64 {
   margin-bottom: 0.64rem;
-}
-
-.mb-0\.5 {
-  margin-bottom: 0.125rem;
-}
-
-.mb-1 {
-  margin-bottom: 0.25rem;
 }
 
 .opacity-0 {
@@ -100,10 +70,6 @@
 
 .rounded-full {
   border-radius: 9999px;
-}
-
-.self-flex-end {
-  align-self: flex-end;
 }
 
 .shadow-md {
@@ -160,23 +126,39 @@
   top: 3rem;
 }
 
-.checkboxGreen {
+.text-white {
+  color: white;
+}
+
+.blue .text {
+  color: var(--mariner-900);
+}
+
+.orange .text {
+  color: var(--web-orange-900);
+}
+
+.red .text {
+  color: var(--crimson-900);
+}
+
+.green .customCheckbox {
   border: 1px solid var(--jade-700);
 }
 
-.checkboxBlue {
+.blue .customCheckbox {
   border: 1px solid var(--mariner-600);
 }
 
-.checkboxOrange {
+.orange .customCheckbox {
   border: 1px solid var(--web-orange-700);
 }
 
-.checkboxRed {
+.red .customCheckbox {
   border: 1px solid var(--crimson-900);
 }
 
-.spanGreen {
+.green .customSpan {
   background: linear-gradient(
     to bottom right,
     var(--jade-200),
@@ -184,7 +166,7 @@
   );
 }
 
-.spanBlue {
+.blue .customSpan {
   background: linear-gradient(
     to bottom right,
     var(--mariner-400),
@@ -192,7 +174,7 @@
   );
 }
 
-.spanOrange {
+.orange .customSpan {
   background: linear-gradient(
     to bottom right,
     var(--web-orange-500),
@@ -200,7 +182,7 @@
   );
 }
 
-.spanRed {
+.red .customSpan {
   background: linear-gradient(
     to bottom right,
     var(--crimson-400),
@@ -214,14 +196,97 @@
   gap: 1.25rem;
 }
 
-.btnGreen {
+.green.headerBg {
+  background: linear-gradient(
+    to bottom right,
+    var(--jade-500),
+    var(--jade-800)
+  );
+}
+
+.blue.headerBg {
+  background: linear-gradient(
+    to bottom right,
+    var(--mariner-400),
+    var(--mariner-800)
+  );
+}
+
+.orange.headerBg {
+  background: linear-gradient(
+    to bottom right,
+    var(--web-orange-500),
+    var(--web-orange-800)
+  );
+}
+
+.red.headerBg {
+  background: linear-gradient(
+    to bottom right,
+    var(--crimson-300),
+    var(--crimson-800)
+  );
+}
+
+.green .length {
+  color: var(--jade-600);
+}
+
+.blue .length {
+  color: var(--mariner-600);
+}
+
+.orange .length {
+  color: var(--web-orange-600);
+}
+
+.red .length {
+  color: var(--crimson-600);
+}
+
+.green.bg {
+  background-color: white;
+}
+
+.blue.bg {
+  background-color: var(--mariner-50);
+}
+
+.orange.bg {
+  background-color: var(--web-orange-50);
+}
+
+.red.bg {
+  background-color: var(--crimson-50);
+}
+
+.green .taskTitleInputBorder {
+  border-bottom: 1px solid var(--jade-500);
+}
+
+.blue .taskTitleInputBorder {
+  color: var(--mariner-900);
+  border-bottom: 1px solid var(--mariner-500);
+}
+
+.orange .taskTitleInputBorder {
+  color: var(--web-orange-900);
+  border-bottom: 1px solid var(--web-orange-500);
+}
+
+.red .taskTitleInputBorder {
+  color: var(--crimson-900);
+  border-bottom: 1px solid var(--crimson-400);
+}
+
+.green .btn {
   background-image: linear-gradient(
     to bottom right,
     var(--jade-400),
     var(--jade-600)
   ) !important;
 }
-.btnGreen:hover {
+.green .btn:hover {
   background-image: linear-gradient(
     to bottom right,
     var(--jade-500),
@@ -229,14 +294,14 @@
   ) !important;
 }
 
-.btnBlue {
+.blue .btn {
   background-image: linear-gradient(
     to bottom right,
     var(--mariner-400),
     var(--mariner-600)
   ) !important;
 }
-.btnBlue:hover {
+.blue .btn:hover {
   background-image: linear-gradient(
     to bottom right,
     var(--mariner-500),
@@ -244,14 +309,14 @@
   ) !important;
 }
 
-.btnOrange {
+.orange .btn {
   background-image: linear-gradient(
     to bottom right,
     var(--web-orange-400),
     var(--web-orange-600)
   ) !important;
 }
-.btnOrange:hover {
+.orange .btn:hover {
   background-image: linear-gradient(
     to bottom right,
     var(--web-orange-500),
@@ -259,14 +324,14 @@
   ) !important;
 }
 
-.btnRed {
+.red .btn {
   background-image: linear-gradient(
     to bottom right,
     var(--crimson-300),
     var(--crimson-500)
   ) !important;
 }
-.btnRed:hover {
+.red .btn:hover {
   background-image: linear-gradient(
     to bottom right,
     var(--crimson-400),

@@ -40,7 +40,6 @@ export default function TaskItem({
         item={item}
         checkedState={checkedState}
         setCheckedState={setCheckedState}
-        themeColor={themeColor}
       />
       <button
         type="button"

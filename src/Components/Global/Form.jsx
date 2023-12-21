@@ -10,28 +10,7 @@ export default function Form({
   setTaskItem,
   setTaskItems,
   setTaskTitle,
-  themeColor,
 }) {
-  let btnColor = "btnGreen";
-  let textColor = "";
-
-  switch (themeColor) {
-    case "blue":
-      textColor = "textBlue";
-      btnColor = "btnBlue";
-      break;
-
-    case "orange":
-      textColor = "textOrange";
-      btnColor = "btnOrange";
-      break;
-
-    case "red":
-      textColor = "textRed";
-      btnColor = "btnRed";
-      break;
-  }
-
   return (
     <form
       action=""
@@ -49,7 +28,7 @@ export default function Form({
     >
       <div className={classes.inputGroup}>
         <input
-          className={`${classes.inputGroupText} ${textColor} rounded-full`}
+          className={`${classes.inputGroupText} text rounded-full`}
           type="text"
           value={taskItem}
           placeholder="Add items here"
@@ -63,7 +42,7 @@ export default function Form({
           }
         />
         <button
-          className={`${classes.inputGroupBtn} ${btnColor} rounded-full`}
+          className={`${classes.inputGroupBtn} btn rounded-full`}
           type="submit"
         >
           <img src={AddImg} className={classes.inputGroupImg} alt="add item" />

@@ -59,7 +59,7 @@ export default function Tasks({
     <>
       <Header themeColor={themeColor} />
       {taskComponent}
-      <NewTaskButton themeColor={themeColor} />
+      <NewTaskButton />
     </>
   );
 }

@@ -8,32 +8,7 @@ export default function Item({
   item,
   checkedState,
   setCheckedState,
-  themeColor,
 }) {
-  let checkboxColor = "checkboxGreen";
-  let spanColor = "spanGreen";
-  let labelColor = "";
-
-  switch (themeColor) {
-    case "blue":
-      checkboxColor = "checkboxBlue";
-      spanColor = "spanBlue";
-      labelColor = "textBlue";
-      break;
-
-    case "orange":
-      checkboxColor = "checkboxOrange";
-      spanColor = "spanOrange";
-      labelColor = "textOrange";
-      break;
-
-    case "red":
-      checkboxColor = "checkboxRed";
-      spanColor = "spanRed";
-      labelColor = "textRed";
-      break;
-  }
-
   const inputId = `checkbox_${Math.random()}`;
 
   return (
@@ -47,15 +22,14 @@ export default function Item({
       />{" "}
       <label
         htmlFor={inputId}
-        className={`checkbox ${checkboxColor} rounded-full`}
+        className={`checkbox customCheckbox rounded-full`}
       >
-        <span className={`${checkedState ? "span" : ""} ${spanColor}`}></span>
+        <span className={`${checkedState ? "span" : ""} customSpan`}></span>
       </label>
       <label
         htmlFor={inputId}
-        className={`${classes.itemText} ${labelColor} ${
-          checkedState ? classes.itemClicked : "opacity-100"
-        }`}
+        className={`${classes.itemText}  
+        ${checkedState ? classes.itemClicked : "opacity-100"} text`}
       >
         {item}
       </label>

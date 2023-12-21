@@ -14,23 +14,19 @@ export default function Bin({
   onRestoreTask,
   themeColor,
 }) {
-  let btnColor = "btnGreen";
   let imgSrc = BinImgBlack;
 
   switch (themeColor) {
     case "blue":
       imgSrc = BinImgBlue;
-      btnColor = "btnBlue";
       break;
 
     case "orange":
       imgSrc = BinImgOrange;
-      btnColor = "btnOrange";
       break;
 
     case "red":
       imgSrc = BinImgRed;
-      btnColor = "btnRed";
       break;
   }
 
@@ -42,7 +38,7 @@ export default function Bin({
   }
 
   let binItemsComponent = (
-    <img src={imgSrc} alt="bin image" className={classes.blackBinImg} />
+    <img src={imgSrc} alt="bin image" className={classes.bigBinImg} />
   );
 
   if (bin.length > 0) {
@@ -61,7 +57,7 @@ export default function Bin({
       <Title themeColor={themeColor} />
       {binItemsComponent}
       <button
-        className={`${classes.deleteButton} ${btnColor}`}
+        className={`${classes.deleteButton} btn`}
         type="button"
         onClick={onDeleteAll}
       >

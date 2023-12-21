@@ -15,24 +15,8 @@ export default function Main({
   onToggleCheckBox,
   themeColor,
 }) {
-  let bgColor = classes.bgWhite;
-
-  switch (themeColor) {
-    case "blue":
-      bgColor = classes.bgBlue;
-      break;
-
-    case "orange":
-      bgColor = classes.bgOrange;
-      break;
-
-    case "red":
-      bgColor = classes.bgRed;
-      break;
-  }
-
   return (
-    <main className={`${classes.main} ${bgColor}`}>
+    <main className={`${themeColor} bg ${classes.main}`}>
       <RoutesComponent
         task={task}
         tasks={tasks}

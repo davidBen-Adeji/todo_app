@@ -26,7 +26,6 @@ export default function ViewedTask({ task, onUpdateTask, themeColor }) {
         title={taskTitle}
         setTaskTitle={setTaskTitle}
         setTaskItem={setTaskItem}
-        themeColor={themeColor}
       />
       <TaskItems
         id={task.id}
@@ -43,7 +42,6 @@ export default function ViewedTask({ task, onUpdateTask, themeColor }) {
         setTaskItem={setTaskItem}
         setTaskItems={setTaskItems}
         setTaskTitle={setTaskTitle}
-        themeColor={themeColor}
       />
       <DoneButton onUpdateTask={() => onUpdateTask(updatedTask)} themeColor={themeColor} />
     </>

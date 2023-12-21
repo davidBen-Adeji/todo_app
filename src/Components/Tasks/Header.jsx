@@ -7,29 +7,25 @@ import classes from "./Header.module.css";
 
 export default function Header({ themeColor }) {
   let imgSrc = TaskImg;
-  let textColor = "";
 
   switch (themeColor) {
     case "blue":
       imgSrc = TaskImgBlue;
-      textColor = "textBlue"
       break;
 
     case "orange":
       imgSrc = TaskImgOrange;
-      textColor = "textOrange"
       break;
 
     case "red":
       imgSrc = TaskImgRed;
-      textColor = "textRed"
       break;
   }
 
   return (
     <div className={classes.header}>
       <img src={imgSrc} alt="task" />
-      <h1 className={`${classes.headerText} ${textColor}`}>Tasks</h1>
+      <h1 className={`${classes.headerText} text`}>Tasks</h1>
     </div>
   );
 }

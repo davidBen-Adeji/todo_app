@@ -14,21 +14,3 @@
     line-height: 2.25rem;
 }
 
-.inputGreen {
-    border-bottom: 1px solid var(--jade-500);
-}
-
-.inputBlue {
-    color: var(--mariner-900);
-    border-bottom: 1px solid var(--mariner-500);
-}
-
-.inputOrange {
-    color: var(--web-orange-900);
-    border-bottom: 1px solid var(--web-orange-500);
-}
-
-.inputRed {
-    color: var(--crimson-900);
-    border-bottom: 1px solid var(--crimson-400);
-}

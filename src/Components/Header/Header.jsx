@@ -11,39 +11,8 @@ export default function Header({
   themeColor,
   onChangeThemeColor,
 }) {
-  let tasksOpacityClass = "opacity-0";
-  let binOpacityClass = "opacity-0";
-
-  let bgColor = classes.headerGreen;
-  let lengthColor = classes.lengthGreen;
-
-  switch (themeColor) {
-    case "blue":
-      bgColor = classes.headerBlue;
-      lengthColor = classes.lengthBlue;
-      break;
-
-    case "orange":
-      bgColor = classes.headerOrange;
-      lengthColor = classes.lengthOrange;
-      break;
-
-    case "red":
-      bgColor = classes.headerRed;
-      lengthColor = classes.lengthRed;
-      break;
-  }
-
-  if (undoneTasksLength > 0) {
-    tasksOpacityClass = "opacity-100";
-  }
-
-  if (binLength > 0) {
-    binOpacityClass = "opacity-100";
-  }
-
   return (
-    <header className={`${classes.header} ${bgColor}`}>
+    <header className={`${themeColor} ${classes.header} headerBg`}>
       <ThemeButtons
         themeColor={themeColor}
         onChangeThemeColor={onChangeThemeColor}
@@ -51,11 +20,10 @@ export default function Header({
       <div className={classes.nav}>
         <CustomLink to="/">
           <img className={classes.taskImg} src={TaskImg} alt="tasks" />
-          {/* mb-0.5 */}
           <p className="text-white mb-0.64">Tasks</p>
-          {/* mb-1 */}
           <p
-            className={`${classes.headerLengths} ${lengthColor} ${tasksOpacityClass}`}
+            className={`${classes.headerLengths} length 
+            ${undoneTasksLength > 0 ? "opacity-100" : "opacity-0"}`}
           >
             {undoneTasksLength}
           </p>
@@ -63,9 +31,9 @@ export default function Header({
         <CustomLink to="/bin">
           <img className={classes.binImg} src={BinImg} alt="bin" />
           <p className="text-white mb-0.64">Bin</p>
-          {/* mb-0.5 */}
           <p
-            className={`${classes.headerLengths} ${lengthColor} ${binOpacityClass}`}
+            className={`${classes.headerLengths} length
+             ${binLength > 0 ? "opacity-100" : "opacity-0"}`}
           >
             {binLength}
           </p>

@@ -28,7 +28,6 @@ export default function NewTask({ onAddTask, themeColor }) {
         title={taskTitle}
         setTaskTitle={setTaskTitle}
         setTaskItem={setTaskItem}
-        themeColor={themeColor}
       />
       <TaskItems
         id={task.id}
@@ -46,10 +45,9 @@ export default function NewTask({ onAddTask, themeColor }) {
         setTaskItem={setTaskItem}
         setTaskItems={setTaskItems}
         setTaskTitle={setTaskTitle}
-        themeColor={themeColor}
       />
 
-      <Buttons onAddTask={() => onAddTask(task)} themeColor={themeColor} />
+      <Buttons onAddTask={() => onAddTask(task)} />
     </>
   );
 }
