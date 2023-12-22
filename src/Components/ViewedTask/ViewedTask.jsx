@@ -14,8 +14,10 @@ export default function ViewedTask({ task, onUpdateTask, themeColor }) {
     JSON.parse(localStorage.getItem(`${task.id}_checkedState`)) ||
       new Array(taskItems.length).fill(false)
   );
+  const [isInputFieldEmpty, setIsInputFieldEmpty] = useState(false);
+
   const updatedTask = {
-    taskTitle: taskTitle || "unnamed task",
+    taskTitle: taskTitle.trim(),
     taskItems,
     id: task.id,
   };
@@ -26,10 +28,11 @@ export default function ViewedTask({ task, onUpdateTask, themeColor }) {
         title={taskTitle}
         setTaskTitle={setTaskTitle}
         setTaskItem={setTaskItem}
+        isInputFieldEmpty={isInputFieldEmpty}
       />
       <TaskItems
         id={task.id}
-        taskItems={updatedTask.taskItems}
+        taskItems={taskItems}
         checkedState={checkedState}
         setCheckedState={setCheckedState}
         setTaskItems={setTaskItems}
@@ -43,7 +46,11 @@ export default function ViewedTask({ task, onUpdateTask, themeColor }) {
         setTaskItems={setTaskItems}
         setTaskTitle={setTaskTitle}
       />
-      <DoneButton onUpdateTask={() => onUpdateTask(updatedTask)} themeColor={themeColor} />
+      <DoneButton
+        onUpdateTask={() => onUpdateTask(updatedTask)}
+        taskTitle={taskTitle.trim()}
+        setIsInputFieldEmpty={setIsInputFieldEmpty}
+      />
     </>
   );
 }

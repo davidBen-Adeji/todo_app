@@ -6,7 +6,11 @@ import { removeNewId } from "../../util/functions";
 
 import classes from "./Buttons.module.css";
 
-export default function Buttons({ onAddTask }) {
+export default function Buttons({
+  taskTitle,
+  setIsInputFieldEmpty,
+  onAddTask,
+}) {
   return (
     <div className={classes.buttons}>
       <Link
@@ -18,8 +22,17 @@ export default function Buttons({ onAddTask }) {
       </Link>
       <Link
         className={`${classes.button} ${classes.done} btn rounded-full`}
-        to="/"
-        onClick={onAddTask}
+        to={`${taskTitle ? "/" : ""}`}
+        onClick={
+          taskTitle
+            ? onAddTask
+            : () => {
+                setIsInputFieldEmpty(true);
+                setTimeout(() => {
+                  setIsInputFieldEmpty(false);
+                }, 500);
+              }
+        }
       >
         <img className={classes.doneImg} src={DoneImg} alt="done" />
       </Link>

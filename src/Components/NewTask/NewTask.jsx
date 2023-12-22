@@ -11,13 +11,15 @@ export default function NewTask({ onAddTask, themeColor }) {
   const [checkedState, setCheckedState] = useState(
     new Array(taskItems.length).fill(false)
   );
+  const [isInputFieldEmpty, setIsInputFieldEmpty] = useState(false);
+
   const id =
     JSON.parse(localStorage.getItem("newId")) ||
     `${Math.random()}_${Math.random()}`;
   localStorage.setItem("newId", JSON.stringify(id));
 
   const task = {
-    taskTitle: taskTitle || "Unnamed Task",
+    taskTitle: taskTitle.trim(),
     taskItems,
     id,
   };
@@ -28,10 +30,11 @@ export default function NewTask({ onAddTask, themeColor }) {
         title={taskTitle}
         setTaskTitle={setTaskTitle}
         setTaskItem={setTaskItem}
+        isInputFieldEmpty={isInputFieldEmpty}
       />
       <TaskItems
         id={task.id}
-        taskItems={task.taskItems}
+        taskItems={taskItems}
         checkedState={checkedState}
         setCheckedState={setCheckedState}
         setTaskItems={setTaskItems}
@@ -47,7 +50,7 @@ export default function NewTask({ onAddTask, themeColor }) {
         setTaskTitle={setTaskTitle}
       />
 
-      <Buttons onAddTask={() => onAddTask(task)} />
+      <Buttons taskTitle={taskTitle.trim()} setIsInputFieldEmpty={setIsInputFieldEmpty} onAddTask={() => onAddTask(task)} />
     </>
   );
 }

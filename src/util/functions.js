@@ -26,19 +26,31 @@ export function addTaskItemHandler(
   setTaskItems,
   setTaskItem,
   setCheckedState,
+  setIsInputFieldEmpty,
   id
 ) {
   event.preventDefault();
-  if (!taskItem) return;
+  const item = taskItem.trim()
+
+  if (!item) {
+    setIsInputFieldEmpty(true);
+
+    setTimeout(() => {
+      setIsInputFieldEmpty(false);
+    }, 500)
+    return;
+  }
 
   setTaskItems((prevItems) => {
     localStorage.setItem(
       `${id}_items`,
-      JSON.stringify([...prevItems, taskItem])
+      JSON.stringify([...prevItems, item])
     );
-    return [...prevItems, taskItem];
+    return [...prevItems, item];
   });
+
   setTaskItem("");
+
   setCheckedState((prevState) => {
     localStorage.setItem(
       `${id}_checkedState`,

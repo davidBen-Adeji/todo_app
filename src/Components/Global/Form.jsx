@@ -2,6 +2,7 @@ import { addTaskItemHandler, inputChangeHandler } from "../../util/functions";
 import AddImg from "../../assets/svg/add.svg";
 
 import classes from "./Form.module.css";
+import { useState } from "react";
 
 export default function Form({
   id,
@@ -11,6 +12,8 @@ export default function Form({
   setTaskItems,
   setTaskTitle,
 }) {
+  const [isInputFieldEmpty, setIsInputFieldEmpty] = useState(false);
+
   return (
     <form
       action=""
@@ -21,10 +24,12 @@ export default function Form({
           setTaskItems,
           setTaskItem,
           setCheckedState,
+          setIsInputFieldEmpty,
           id
         )
       }
-      className={`${classes.form} shadow-lg rounded-full`}
+      className={`${classes.form} 
+      ${isInputFieldEmpty ? "shaking-element" : ""} shadow-lg rounded-full`}
     >
       <div className={classes.inputGroup}>
         <input
