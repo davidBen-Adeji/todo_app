@@ -23,7 +23,7 @@ export default function DeleteTaskButton({ onDeleteTask, themeColor }) {
   }
 
   return (
-    <button onClick={onDeleteTask} type="submit">
+    <button className="delete-btn" onClick={onDeleteTask} type="submit">
       <img className={classes.deleteTaskButton} src={imgSrc} alt="bin" />
     </button>
   );

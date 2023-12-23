@@ -99,6 +99,11 @@
   gap: 0.5rem;
 }
 
+.delete-btn {
+  width: fit-content;
+  justify-self: end;
+}
+
 .checkbox {
   display: flex;
   justify-content: center;
