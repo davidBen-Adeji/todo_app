@@ -11,6 +11,8 @@ A simple todo list app to add, edit, and delete tasks
   - [Restore Task](#restore-task)
 - [My Process](#my-process)
   - [Built with](#built-with)
+- [Updates](#updates)
+  - [Added 3 new themes](#12/12/2023)
 - [License](#license)
 
 ## Installation Instructions
@@ -43,8 +45,12 @@ https://github.com/davidBen-Adeji/todo_app/assets/56682853/29d1247c-c82d-4a9f-b8
 ## My process
 ### Built with
 - React
-- Tailwind
 - Mobile-first workflow
+
+## Updates
+### 12/12/2023 - Added 3 new themes
+
+https://github.com/davidBen-Adeji/todo_app/assets/56682853/7e5ced21-9b49-49d6-a1a4-e05f086b3442
 
 ## License
 Copyright © 2023 [David Ben-Adeji](https://github.com/davidBen-Adeji/todo_app/).
