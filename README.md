@@ -48,7 +48,7 @@ https://github.com/davidBen-Adeji/todo_app/assets/56682853/29d1247c-c82d-4a9f-b8
 - Mobile-first workflow
 
 ## Updates
-### 12/12/2023 - Added 3 new themes <a name="newThemes"></>
+### 12/12/2023 - Added 3 new themes <a name="newThemes"></a>
 
 https://github.com/davidBen-Adeji/todo_app/assets/56682853/7e5ced21-9b49-49d6-a1a4-e05f086b3442
 
